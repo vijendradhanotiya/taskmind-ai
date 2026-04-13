@@ -1,0 +1,1247 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "intents": ["TASK_ASSIGN", "TASK_DONE", "TASK_BLOCKED", "PROGRESS_NOTE", "INFO"],
+    "total_examples": 120,
+    "source": "BlockX AI team WhatsApp group + augmented variants"
+  },
+  "examples": [
+    {
+      "id": "001",
+      "input": "I want you to deploy the same frontend which uses the evi backend url. I want is ASAP NO Delay Expected",
+      "mentions": ["Arpit GS Kota"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Arpit GS Kota"],
+        "title": "Deploy frontend using EVI backend URL",
+        "deadline": null,
+        "urgency": "high",
+        "projectHint": null
+      }
+    },
+    {
+      "id": "002",
+      "input": "Done.",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_DONE",
+        "taskRef": "inferred_from_context",
+        "needsConfirmation": false
+      }
+    },
+    {
+      "id": "003",
+      "input": "Deployment done",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_DONE",
+        "taskRef": "inferred_from_context",
+        "needsConfirmation": false
+      }
+    },
+    {
+      "id": "004",
+      "input": "All bugs reported are fixed and pushed. You can test out everything",
+      "mentions": ["Agrim"],
+      "output": {
+        "intent": "TASK_DONE",
+        "taskRef": "bug fixes",
+        "needsConfirmation": false
+      }
+    },
+    {
+      "id": "005",
+      "input": "Commit done",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_DONE",
+        "taskRef": "inferred_from_context",
+        "needsConfirmation": false
+      }
+    },
+    {
+      "id": "006",
+      "input": "did the mailing part. Updating the template rn",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressDescription": "Mailing done, template update in progress",
+        "taskRef": "mailing outreach"
+      }
+    },
+    {
+      "id": "007",
+      "input": "dependency error coming",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_BLOCKED",
+        "blockerType": "technical_error",
+        "description": "dependency error"
+      }
+    },
+    {
+      "id": "008",
+      "input": "Getting 500 error on doing registration",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_BLOCKED",
+        "blockerType": "api_error",
+        "description": "500 error on registration",
+        "errorCode": "500"
+      }
+    },
+    {
+      "id": "009",
+      "input": "502 issues at the chat",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_BLOCKED",
+        "blockerType": "api_error",
+        "description": "502 error in chat",
+        "errorCode": "502"
+      }
+    },
+    {
+      "id": "010",
+      "input": "it's working in locals, let me deploy it again",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressDescription": "Works locally, attempting redeployment",
+        "taskRef": "inferred_from_context"
+      }
+    },
+    {
+      "id": "011",
+      "input": "I can't register on Canton maybe the .env issue or anything else",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_BLOCKED",
+        "blockerType": "configuration_error",
+        "description": "Registration failing, suspected .env issue"
+      }
+    },
+    {
+      "id": "012",
+      "input": "Sure sir ready for it",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "acknowledgment"
+      }
+    },
+    {
+      "id": "013",
+      "input": "Checking and pulling locally",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressDescription": "Checking and pulling code locally"
+      }
+    },
+    {
+      "id": "014",
+      "input": "resolving",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressDescription": "Working on resolution"
+      }
+    },
+    {
+      "id": "015",
+      "input": "on it also, Sending in a while",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressDescription": "Task in progress, will send soon"
+      }
+    },
+    {
+      "id": "016",
+      "input": "How's all going work side?",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "status_check"
+      }
+    },
+    {
+      "id": "017",
+      "input": "Everything's goin great!",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "status_update"
+      }
+    },
+    {
+      "id": "018",
+      "input": "Get a video for the Canton dapp builder with @Kinjal ASAP so i can send to canton teams",
+      "mentions": ["Sarthak", "Kinjal"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Sarthak", "Kinjal"],
+        "title": "Create demo video for Canton dapp builder",
+        "deadline": null,
+        "urgency": "high",
+        "projectHint": "Canton"
+      }
+    },
+    {
+      "id": "019",
+      "input": "Make another deployment of it named as evi-games.vercel.app",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": [],
+        "title": "Deploy to evi-games.vercel.app",
+        "deadline": null,
+        "urgency": "normal",
+        "projectHint": "EVI Games"
+      }
+    },
+    {
+      "id": "020",
+      "input": "Get a good frontend done for this. Color theme as black and white. Deadline is 16 April",
+      "mentions": ["Agrim"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Agrim"],
+        "title": "Build frontend with black and white color theme",
+        "deadline": "2026-04-16",
+        "urgency": "normal",
+        "projectHint": "web3cash.ginie.xyz"
+      }
+    },
+    {
+      "id": "021",
+      "input": "Sarthak priorities: 1. Ginie Devnet setup 2. Canton Ginie script to Kinjal for voiceover 3. GrowStreams commit and tests 4. Compli pending task",
+      "mentions": ["Sarthak", "Kinjal"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Sarthak"],
+        "tasks": [
+          { "title": "Ginie Devnet setup", "priority": 1 },
+          { "title": "Canton Ginie script for Kinjal voiceover", "priority": 2 },
+          { "title": "GrowStreams commit and tests", "priority": 3 },
+          { "title": "Compli pending task", "priority": 4 }
+        ],
+        "urgency": "high"
+      }
+    },
+    {
+      "id": "022",
+      "input": "Prioritize the GrowStreams on canton Deck",
+      "mentions": ["Agrim"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Agrim"],
+        "title": "Prioritize GrowStreams section in Canton deck",
+        "urgency": "high",
+        "projectHint": "GrowStreams Canton"
+      }
+    },
+    {
+      "id": "023",
+      "input": "Can you do api testing with help of Prakhar and Arpit?",
+      "mentions": ["Anshu", "Prakhar", "Arpit"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Anshu", "Prakhar", "Arpit"],
+        "title": "API testing",
+        "urgency": "normal"
+      }
+    },
+    {
+      "id": "024",
+      "input": "Anyone having bandwidth familiar with chatbot or ADK? Needed some help in fixing issues",
+      "mentions": ["Arpit", "Prakhar", "Sarthak"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": [],
+        "title": "Fix issues in chatbot/ADK",
+        "urgency": "normal",
+        "openAssignment": true
+      }
+    },
+    {
+      "id": "025",
+      "input": "https://canton.ginie.xyz",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_DONE",
+        "evidence": "deployment_url",
+        "url": "https://canton.ginie.xyz",
+        "taskRef": "inferred_from_context"
+      }
+    },
+    {
+      "id": "026",
+      "input": "https://harry-porter-themed-tic-tac-toe-gam.vercel.app",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_DONE",
+        "evidence": "deployment_url",
+        "url": "https://harry-porter-themed-tic-tac-toe-gam.vercel.app",
+        "taskRef": "Harry Potter tic-tac-toe game"
+      }
+    },
+    {
+      "id": "027",
+      "input": "it's live now. check https://arcade.ginie.xyz/",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_DONE",
+        "evidence": "deployment_url",
+        "url": "https://arcade.ginie.xyz/",
+        "taskRef": "arcade deployment"
+      }
+    },
+    {
+      "id": "028",
+      "input": "Today locked for compliledger final all final and nehvij completion mostly by today if delayed then all done by tomorrow",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressDescription": "Working on CompliLedger final and NehVij completion",
+        "deadline": "relative+1d"
+      }
+    },
+    {
+      "id": "029",
+      "input": "I'm working on classifier based models to brainstorm the game development with more ease",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressDescription": "Working on classifier based models for game development"
+      }
+    },
+    {
+      "id": "030",
+      "input": "Let me check what's the issue and resolve it",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressDescription": "Investigating and resolving issue"
+      }
+    },
+    {
+      "id": "031",
+      "input": "done bhai, merged the PR",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_DONE",
+        "taskRef": "inferred_from_context",
+        "evidence": "pr_merged"
+      }
+    },
+    {
+      "id": "032",
+      "input": "Bhai on it also",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressDescription": "Task in progress"
+      }
+    },
+    {
+      "id": "033",
+      "input": "sure boss",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "acknowledgment"
+      }
+    },
+    {
+      "id": "034",
+      "input": "Okayy",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "acknowledgment"
+      }
+    },
+    {
+      "id": "035",
+      "input": "Sure sir will complete it by tonight",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressDescription": "Acknowledged, will complete by tonight",
+        "deadline": "relative+tonight"
+      }
+    },
+    {
+      "id": "036",
+      "input": "Please research over it and share findings by tomorrow",
+      "mentions": ["Prakhar", "Agrim"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Prakhar", "Agrim"],
+        "title": "Research and share findings",
+        "deadline": "relative+1d",
+        "urgency": "normal"
+      }
+    },
+    {
+      "id": "037",
+      "input": "kindly make a demo Video of This Website and explain for each type of user. Est date 14-04-26",
+      "mentions": ["Sarthak"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Sarthak"],
+        "title": "Create demo video explaining website for each user type",
+        "deadline": "2026-04-14",
+        "urgency": "normal"
+      }
+    },
+    {
+      "id": "038",
+      "input": "Kindly please select your day",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "poll_request"
+      }
+    },
+    {
+      "id": "039",
+      "input": "Please list me your task and product testing principles like what all philosophy you follow to test and finalise a product",
+      "mentions": ["Agrim", "Arpit", "Prakhar", "Sarthak"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Agrim", "Arpit", "Prakhar", "Sarthak"],
+        "title": "Document personal task and product testing principles",
+        "urgency": "normal"
+      }
+    },
+    {
+      "id": "040",
+      "input": "We correct it now our official telegram, x and GitHub link showing",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_DONE",
+        "taskRef": "Update social links on growstreams.xyz",
+        "evidence": "self_reported"
+      }
+    },
+    {
+      "id": "041",
+      "input": "I found some areas of improvement into GrowStreams Canton. I'll be working on it",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressDescription": "Identified improvements in GrowStreams Canton, starting work",
+        "projectHint": "GrowStreams Canton"
+      }
+    },
+    {
+      "id": "042",
+      "input": "Remove all these emojis and fluff and make it pro level",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": [],
+        "title": "Clean up README - remove emojis and make professional",
+        "urgency": "normal"
+      }
+    },
+    {
+      "id": "043",
+      "input": "Please push all our best products of BlockXAI as repo to this org",
+      "mentions": ["Arpit", "Agrim", "Sarthak"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Arpit", "Agrim", "Sarthak"],
+        "title": "Push best BlockX AI products to org GitHub",
+        "urgency": "normal"
+      }
+    },
+    {
+      "id": "044",
+      "input": "Good and Thanks",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "acknowledgment"
+      }
+    },
+    {
+      "id": "045",
+      "input": "Amazing work loved the dedication and speed of execution",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "praise"
+      }
+    },
+    {
+      "id": "046",
+      "input": "Totally impressed",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "praise"
+      }
+    },
+    {
+      "id": "047",
+      "input": "Make sure I don't have to ping if it's completed or not. Deadline 16 April",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": [],
+        "title": "Complete frontend for web3cash.ginie.xyz",
+        "deadline": "2026-04-16",
+        "urgency": "high"
+      }
+    },
+    {
+      "id": "048",
+      "input": "Yaar login wala karo by friday",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": [],
+        "title": "Complete login page",
+        "deadline": "relative+friday",
+        "urgency": "normal"
+      }
+    },
+    {
+      "id": "049",
+      "input": "bhai what is this so much waste code is also there",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_BLOCKED",
+        "blockerType": "code_quality",
+        "description": "Waste/messy code in codebase"
+      }
+    },
+    {
+      "id": "050",
+      "input": "All the bugs reported are fixed",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_DONE",
+        "taskRef": "bug fixes",
+        "needsConfirmation": false
+      }
+    },
+    {
+      "id": "051",
+      "input": "pushed but needs QA before marking done",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressDescription": "Code pushed, awaiting QA review"
+      }
+    },
+    {
+      "id": "052",
+      "input": "Yesss I'm in",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "acknowledgment"
+      }
+    },
+    {
+      "id": "053",
+      "input": "Will Report you shortly",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressDescription": "Report coming soon"
+      }
+    },
+    {
+      "id": "054",
+      "input": "When are we gonna finalise it?",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "status_check"
+      }
+    },
+    {
+      "id": "055",
+      "input": "Report awaited",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "status_check"
+      }
+    },
+    {
+      "id": "056",
+      "input": "did it??????",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "status_check"
+      }
+    },
+    {
+      "id": "057",
+      "input": "Kindly take this a lil serious note",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "reminder"
+      }
+    },
+    {
+      "id": "058",
+      "input": "I've signed up and prompts given but it is slow",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_BLOCKED",
+        "blockerType": "performance",
+        "description": "Application is slow"
+      }
+    },
+    {
+      "id": "059",
+      "input": "Kindly work the best you can for it. Reports and actions awaited",
+      "mentions": ["Agrim", "Sarthak", "Prakhar"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Agrim", "Sarthak", "Prakhar"],
+        "title": "Test Evi and submit reports and actions",
+        "urgency": "high"
+      }
+    },
+    {
+      "id": "060",
+      "input": "Ok sir I signed up and prompts given but it is slow",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_BLOCKED",
+        "blockerType": "performance",
+        "description": "Signed up and tested, but app is slow"
+      }
+    },
+    {
+      "id": "061",
+      "input": "all good bhai deployed and working perfectly",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_DONE",
+        "taskRef": "deployment",
+        "needsConfirmation": false
+      }
+    },
+    {
+      "id": "062",
+      "input": "Agrim please finish the login page for Project Z by Friday",
+      "mentions": ["Agrim"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Agrim"],
+        "title": "Finish login page",
+        "deadline": "relative+friday",
+        "urgency": "normal",
+        "projectHint": "Project Z"
+      }
+    },
+    {
+      "id": "063",
+      "input": "login page 60% ho gaya",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressPercent": 60,
+        "taskRef": "login page"
+      }
+    },
+    {
+      "id": "064",
+      "input": "it is merged and done now",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_DONE",
+        "evidence": "pr_merged",
+        "taskRef": "inferred_from_context"
+      }
+    },
+    {
+      "id": "065",
+      "input": "90% done just testing remaining",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressPercent": 90,
+        "taskRef": "inferred_from_context"
+      }
+    },
+    {
+      "id": "066",
+      "input": "almost done will push by tonight",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressDescription": "Almost complete, pushing tonight",
+        "deadline": "relative+tonight"
+      }
+    },
+    {
+      "id": "067",
+      "input": "halfway through the API integration",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressPercent": 50,
+        "taskRef": "API integration"
+      }
+    },
+    {
+      "id": "068",
+      "input": "API integration abhi bhi pending hai, blocker hai DB connection",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_BLOCKED",
+        "blockerType": "technical_error",
+        "description": "API integration pending due to DB connection issue"
+      }
+    },
+    {
+      "id": "069",
+      "input": "Please take up some time and share me in a pen paper written format over a table of tasks classified as DONE, BLOCKED or Expected Dates if Pending",
+      "mentions": ["Agrim"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Agrim"],
+        "title": "Share task status table: Done, Blocked, Pending with dates",
+        "urgency": "normal"
+      }
+    },
+    {
+      "id": "070",
+      "input": "frontend team will update the site of GrowStreams and blockchain team is working on new smart contract. We've around 7 days to get this done",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": [],
+        "tasks": [
+          { "title": "Update GrowStreams site", "team": "frontend" },
+          { "title": "Implement new smart contract", "team": "blockchain" }
+        ],
+        "deadline": "relative+7d",
+        "urgency": "normal"
+      }
+    },
+    {
+      "id": "071",
+      "input": "lesgooo",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "celebration"
+      }
+    },
+    {
+      "id": "072",
+      "input": "🔥🔥🔥",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "reaction"
+      }
+    },
+    {
+      "id": "073",
+      "input": "👍",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "reaction"
+      }
+    },
+    {
+      "id": "074",
+      "input": "This message was deleted",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "deleted_message",
+        "skip": true
+      }
+    },
+    {
+      "id": "075",
+      "input": "image omitted",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "media_only",
+        "skip": true
+      }
+    },
+    {
+      "id": "076",
+      "input": "document omitted",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "media_only",
+        "skip": true
+      }
+    },
+    {
+      "id": "077",
+      "input": "Let me kill and fix all errors",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressDescription": "Working on fixing all reported errors"
+      }
+    },
+    {
+      "id": "078",
+      "input": "Wtf! Why is everything crashing?",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_BLOCKED",
+        "blockerType": "system_crash",
+        "description": "Multiple services crashing"
+      }
+    },
+    {
+      "id": "079",
+      "input": "Locals is never needed. All must be on deployments",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "guideline"
+      }
+    },
+    {
+      "id": "080",
+      "input": "in production it's showing error 404 please check",
+      "mentions": ["Agrim"],
+      "output": {
+        "intent": "TASK_BLOCKED",
+        "blockerType": "api_error",
+        "description": "404 error in production",
+        "errorCode": "404"
+      }
+    },
+    {
+      "id": "081",
+      "input": "ok sir let me check and give my feedbacks",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressDescription": "Will check and provide feedback"
+      }
+    },
+    {
+      "id": "082",
+      "input": "Yesss call me",
+      "mentions": ["Agrim"],
+      "output": {
+        "intent": "INFO",
+        "subtype": "communication_request"
+      }
+    },
+    {
+      "id": "083",
+      "input": "Once I'm back we gonna work on Evi Games",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "upcoming_plan"
+      }
+    },
+    {
+      "id": "084",
+      "input": "Please make sure whatever is live is working and well maintained",
+      "mentions": ["Arpit", "Prakhar", "Sarthak", "Agrim"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Arpit", "Prakhar", "Sarthak", "Agrim"],
+        "title": "Ensure all live deployments are working and maintained",
+        "urgency": "high"
+      }
+    },
+    {
+      "id": "085",
+      "input": "Get a e2e test script for Ginie backend please what's live with all user management as well as core api",
+      "mentions": ["Arpit"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Arpit"],
+        "title": "Create E2E test script for Ginie backend covering user management and core APIs",
+        "urgency": "high"
+      }
+    },
+    {
+      "id": "086",
+      "input": "We need to add up a sandbox based feature in github agent. PR ko lekr try to run the codes",
+      "mentions": ["Sarthak"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Sarthak"],
+        "title": "Add sandbox feature to GitHub agent to run PR code",
+        "urgency": "normal"
+      }
+    },
+    {
+      "id": "087",
+      "input": "Few issues and improvements into deck: 1. over branding 2. No mention of why institutions need it 3. No mention to team's prev success",
+      "mentions": ["Agrim"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Agrim"],
+        "title": "Update GrowStreams deck with institutional value prop and team credibility",
+        "tasks": [
+          { "title": "Fix over-branding issue in deck" },
+          { "title": "Add why institutions need GrowStreams" },
+          { "title": "Mention team's previous successes" }
+        ],
+        "urgency": "high"
+      }
+    },
+    {
+      "id": "088",
+      "input": "I tested the pipeline successfully deployed on attempt 7 via fallback. Live contract: https://sepolia.etherscan.io/address/0x9a5F",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_DONE",
+        "taskRef": "Deploy ERC20 contract to Sepolia",
+        "evidence": "deployment_url",
+        "attempts": 7
+      }
+    },
+    {
+      "id": "089",
+      "input": "yaar abhi working on this will push by tomorrow",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressDescription": "In progress, will push by tomorrow",
+        "deadline": "relative+1d"
+      }
+    },
+    {
+      "id": "090",
+      "input": "Mailing done successfully sent to all investors in the sheet",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_DONE",
+        "taskRef": "Investor mailing outreach",
+        "needsConfirmation": false
+      }
+    },
+    {
+      "id": "091",
+      "input": "it is simply a html page rendering. nothing else working",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_BLOCKED",
+        "blockerType": "functionality",
+        "description": "Only HTML rendering, no other functionality working"
+      }
+    },
+    {
+      "id": "092",
+      "input": "there is no proper navigation between each steps. can't go back to previous step",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_BLOCKED",
+        "blockerType": "ux_bug",
+        "description": "Missing back navigation between steps"
+      }
+    },
+    {
+      "id": "093",
+      "input": "All done sir. Changes are live now as you said",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_DONE",
+        "taskRef": "inferred_from_context",
+        "needsConfirmation": false
+      }
+    },
+    {
+      "id": "094",
+      "input": "I'll be available. Rest Agrim take care of all smooth execution",
+      "mentions": ["Agrim"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Agrim"],
+        "title": "Manage and ensure smooth execution",
+        "urgency": "normal"
+      }
+    },
+    {
+      "id": "095",
+      "input": "Please be serious about timelines",
+      "mentions": ["Anshu"],
+      "output": {
+        "intent": "INFO",
+        "subtype": "reminder"
+      }
+    },
+    {
+      "id": "096",
+      "input": "Please use this checklist and let me know your findings on real results",
+      "mentions": ["Sarthak", "Agrim", "Prakhar"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Sarthak", "Agrim", "Prakhar"],
+        "title": "Use provided checklist and share findings",
+        "urgency": "normal"
+      }
+    },
+    {
+      "id": "097",
+      "input": "kindly make a Google docs where interns have to update daily progress of activity done time spent on things and learnings made",
+      "mentions": ["Agrim"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Agrim"],
+        "title": "Create Google Doc for interns daily progress tracking",
+        "urgency": "high"
+      }
+    },
+    {
+      "id": "098",
+      "input": "Not it's Properly Deployed and working",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_DONE",
+        "taskRef": "deployment",
+        "needsConfirmation": false
+      }
+    },
+    {
+      "id": "099",
+      "input": "Rest the Landing page is Good to go",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressDescription": "Landing page is ready, remaining items still pending"
+      }
+    },
+    {
+      "id": "100",
+      "input": "I'll also help you with content and proper ideas around it",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "offer_to_help"
+      }
+    },
+    {
+      "id": "101",
+      "input": "auth bug fix complete pushed to main please review",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_DONE",
+        "taskRef": "auth bug fix",
+        "evidence": "pr_pushed",
+        "needsConfirmation": true
+      }
+    },
+    {
+      "id": "102",
+      "input": "@Sarthak can you take a look at the CORS error in staging?",
+      "mentions": ["Sarthak"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Sarthak"],
+        "title": "Investigate CORS error in staging",
+        "urgency": "normal"
+      }
+    },
+    {
+      "id": "103",
+      "input": "Growstreams bug report sent, check the pdf",
+      "mentions": ["Satyam"],
+      "output": {
+        "intent": "TASK_DONE",
+        "taskRef": "GrowStreams bug report",
+        "evidence": "document_shared"
+      }
+    },
+    {
+      "id": "104",
+      "input": "abhi check karta hoon thoda time do",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressDescription": "Checking now, need some time"
+      }
+    },
+    {
+      "id": "105",
+      "input": "sir exam thats why delayed but you will get it",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressDescription": "Delayed due to exam, will deliver"
+      }
+    },
+    {
+      "id": "106",
+      "input": "No worries",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "acknowledgment"
+      }
+    },
+    {
+      "id": "107",
+      "input": "Good going guys Keep doing",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "praise"
+      }
+    },
+    {
+      "id": "108",
+      "input": "social links update on growstreams.xyz urgently",
+      "mentions": ["Prakhar", "Sarthak"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Prakhar", "Sarthak"],
+        "title": "Update social links on growstreams.xyz",
+        "urgency": "high"
+      }
+    },
+    {
+      "id": "109",
+      "input": "I pushed the code to github here is the link https://github.com/BlockX-AI/Canton_Streams_RewardApp",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_DONE",
+        "taskRef": "Canton Streams Reward App",
+        "evidence": "github_url"
+      }
+    },
+    {
+      "id": "110",
+      "input": "build is failing on railway not sure why",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_BLOCKED",
+        "blockerType": "build_error",
+        "description": "Railway build failing, cause unknown"
+      }
+    },
+    {
+      "id": "111",
+      "input": "migration error when running prisma push",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_BLOCKED",
+        "blockerType": "database_error",
+        "description": "Prisma migration push failing"
+      }
+    },
+    {
+      "id": "112",
+      "input": "Yesss please be fast on this",
+      "mentions": [],
+      "output": {
+        "intent": "INFO",
+        "subtype": "reminder"
+      }
+    },
+    {
+      "id": "113",
+      "input": "Please use this to learn DID/VC but is useful only for 2 days not after that",
+      "mentions": ["Prakhar", "Sarthak"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Prakhar", "Sarthak"],
+        "title": "Study DID/VC from provided resource",
+        "deadline": "relative+2d",
+        "urgency": "normal"
+      }
+    },
+    {
+      "id": "114",
+      "input": "Mandatory to learn for all who plays with frontend in Compliledger",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": [],
+        "title": "Study DIDVC Frontend Auth Guide",
+        "urgency": "high",
+        "openAssignment": true
+      }
+    },
+    {
+      "id": "115",
+      "input": "Take a deployed contract from Sarthak around Daml and then build a working dapp on canton. Est date 14-04-26",
+      "mentions": ["Prakhar", "Sarthak"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Prakhar"],
+        "title": "Build working dapp on Canton using Daml deployed contract",
+        "deadline": "2026-04-14",
+        "urgency": "normal",
+        "projectHint": "Canton"
+      }
+    },
+    {
+      "id": "116",
+      "input": "Ginie daml - seo update, favicon update done",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_DONE",
+        "taskRef": "Ginie Daml SEO and favicon update",
+        "needsConfirmation": false
+      }
+    },
+    {
+      "id": "117",
+      "input": "Not yet started will do it after lunch",
+      "mentions": [],
+      "output": {
+        "intent": "PROGRESS_NOTE",
+        "progressDescription": "Not started yet, will begin after lunch"
+      }
+    },
+    {
+      "id": "118",
+      "input": "can someone look at the auth bug in staging?",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": [],
+        "title": "Investigate auth bug in staging",
+        "urgency": "normal",
+        "openAssignment": true
+      }
+    },
+    {
+      "id": "119",
+      "input": "Repo is pushed to arpit github and access given to all",
+      "mentions": [],
+      "output": {
+        "intent": "TASK_DONE",
+        "taskRef": "Push repo and share access",
+        "needsConfirmation": false
+      }
+    },
+    {
+      "id": "120",
+      "input": "Ginie frontend light mode is ready for review. run it locally and after checking call me",
+      "mentions": ["Arpit"],
+      "output": {
+        "intent": "TASK_ASSIGN",
+        "assignees": ["Arpit"],
+        "title": "Review Ginie frontend light mode locally and call back",
+        "urgency": "normal"
+      }
+    }
+  ]
+}
