@@ -91,7 +91,7 @@ class ChatMessage(BaseModel):
 class ChatCompletionRequest(BaseModel):
     model: Optional[str] = None
     messages: List[ChatMessage] = Field(..., min_length=1)
-    max_tokens: Optional[int] = Field(150, ge=1, le=2048)
+    max_tokens: Optional[int] = Field(150, ge=1, le=4096)
     temperature: Optional[float] = Field(0.7, ge=0.0, le=2.0)
     top_p: Optional[float] = Field(1.0, ge=0.0, le=1.0)
     stream: Optional[bool] = False
@@ -122,7 +122,7 @@ class ChatCompletionResponse(BaseModel):
 class CompletionRequest(BaseModel):
     model: Optional[str] = None
     prompt: str = Field(..., min_length=1)
-    max_tokens: Optional[int] = Field(150, ge=1, le=2048)
+    max_tokens: Optional[int] = Field(150, ge=1, le=4096)
     temperature: Optional[float] = Field(0.7, ge=0.0, le=2.0)
     top_p: Optional[float] = Field(1.0, ge=0.0, le=1.0)
     stop: Optional[List[str]] = None
