@@ -23,7 +23,7 @@ print('Adapter ready.')
 "
 
 # Start the API server
-python -m uvicorn api.main:app --host 0.0.0.0 --port 8001
+python3 -m uvicorn api.main:app --host 0.0.0.0 --port 8001
 ```
 
 Server is live at http://localhost:8001

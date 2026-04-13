@@ -44,6 +44,46 @@
 
 ---
 
+## Test Results (96/96 passing)
+
+Full API test suite run on M5 Max — all endpoints, 93 LLM calls:
+
+| Endpoint | Calls | Passed | Avg Latency |
+|---|---|---|---|
+| `/health` `/metrics` `/v1/models` | 3 | 3/3 | 1.4ms |
+| `/v1/classify` | 30 | 30/30 | ~1800ms |
+| `/v1/batch` (10 msgs each) | 3 | 3/3 | ~5200ms |
+| `/v1/chat/completions` | 30 | 30/30 | ~2500ms |
+| `/v1/completions` | 30 | 30/30 | ~1100ms |
+
+Run the suite yourself: `bash tests/run_tests.sh` — saves full CSV report to `tests/reports/`
+
+---
+
+## Hardware — M4 vs M5 Pro vs M5 Max
+
+| | M4 (16 GB) | M5 Pro (24 GB) | **M5 Max (48 GB)** |
+|---|---|---|---|
+| Training time | ~5m 30s | ~2m 45s | **2m 12s ✓ measured** |
+| Inference p50 | ~420ms | ~270ms | **~230ms** |
+| Max trainable model | 1.1B–3B | 3B–7B | **7B–13B** |
+| Training cost | $0 | $0 | **$0** |
+
+See [`docs/HARDWARE_COMPARISON.md`](docs/HARDWARE_COMPARISON.md) for full breakdown including memory, cost, and model size limits.
+
+---
+
+## Documentation
+
+| Doc | What's in it |
+|---|---|
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | System design, MPS explained, prompt format, data flow |
+| [`docs/PERFORMANCE.md`](docs/PERFORMANCE.md) | Loss curve, before/after comparison, latency benchmarks |
+| [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) | Local / Docker / cloud deploy steps + audit checklist |
+| [`docs/HARDWARE_COMPARISON.md`](docs/HARDWARE_COMPARISON.md) | M4 vs M5 Pro vs M5 Max — training speed, memory, cost |
+
+---
+
 ## Quick Start
 
 ### 1. Install
@@ -67,7 +107,7 @@ print('Adapter ready.')
 ### 3. Start the API server
 
 ```bash
-python -m uvicorn api.main:app --host 0.0.0.0 --port 8001
+python3 -m uvicorn api.main:app --host 0.0.0.0 --port 8001
 ```
 
 - API docs: http://localhost:8001/docs
