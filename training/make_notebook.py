@@ -1,0 +1,288 @@
+import json
+
+cells = []
+
+
+def md(source_lines):
+    return {
+        "cell_type": "markdown",
+        "id": f"cell-{len(cells)}",
+        "metadata": {},
+        "source": source_lines,
+    }
+
+
+def code(source_lines):
+    return {
+        "cell_type": "code",
+        "id": f"cell-{len(cells)}",
+        "metadata": {},
+        "source": source_lines,
+        "outputs": [],
+        "execution_count": None,
+    }
+
+
+cells.append(md([
+    "# TaskMind — Fine-tune TinyLlama-1.1B for WhatsApp Task Extraction\n",
+    "\n",
+    "**Works on Google Colab (GPU) and Apple Silicon Mac (MPS/CPU).**  \n",
+    "Run cells from top to bottom. On Colab, upload `train.jsonl` and `valid.jsonl` from your `taskmind-data/` folder when prompted (see Cell 4).\n",
+    "\n",
+    "**Flow:** Install → Load model → Test BEFORE training → Prepare data → Train (LoRA) → Test AFTER training → Upload to HF\n",
+]))
+
+cells.append(code([
+    "import subprocess, sys\n",
+    "subprocess.check_call([\n",
+    "    sys.executable, '-m', 'pip', 'install', '-q',\n",
+    "    'transformers', 'peft', 'trl', 'datasets', 'accelerate', 'huggingface_hub'\n",
+    "])\n",
+    "print('All packages installed.')\n",
+]))
+
+cells.append(code([
+    "import torch\n",
+    "import json\n",
+    "from transformers import AutoModelForCausalLM, AutoTokenizer\n",
+    "\n",
+    "if torch.cuda.is_available():\n",
+    "    DEVICE, DTYPE = 'cuda', torch.float16\n",
+    "    print('Device: CUDA (Colab GPU)')\n",
+    "elif hasattr(torch.backends, 'mps') and torch.backends.mps.is_available():\n",
+    "    DEVICE, DTYPE = 'mps', torch.float32\n",
+    "    print('Device: Apple Silicon MPS')\n",
+    "else:\n",
+    "    DEVICE, DTYPE = 'cpu', torch.float32\n",
+    "    print('Device: CPU')\n",
+    "\n",
+    "MODEL_ID = 'TinyLlama/TinyLlama-1.1B-Chat-v1.0'\n",
+    "print(f'Loading {MODEL_ID} ...')\n",
+    "tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)\n",
+    "if tokenizer.pad_token is None:\n",
+    "    tokenizer.pad_token = tokenizer.eos_token\n",
+    "\n",
+    "model = AutoModelForCausalLM.from_pretrained(\n",
+    "    MODEL_ID,\n",
+    "    torch_dtype=DTYPE,\n",
+    "    device_map='auto' if DEVICE == 'cuda' else None,\n",
+    ")\n",
+    "if DEVICE != 'cuda':\n",
+    "    model = model.to(DEVICE)\n",
+    "print(f'Model ready on {DEVICE}')\n",
+]))
+
+SYSTEM_CELL = (
+    "You are TaskMind. Read the team WhatsApp message and return ONLY a JSON "
+    "object with these exact fields: intent (TASK_ASSIGN / TASK_DONE / "
+    "TASK_UPDATE / PROGRESS_NOTE / GENERAL_MESSAGE), assigneeName, project, "
+    "title, deadline, priority, progressPercent. Use null for unknown fields."
+)
+
+cells.append(code([
+    f"SYSTEM_MSG = (\n",
+    f"    'You are TaskMind. Read the team WhatsApp message and return ONLY a JSON '\n",
+    f"    'object with these exact fields: intent (TASK_ASSIGN / TASK_DONE / '\n",
+    f"    'TASK_UPDATE / PROGRESS_NOTE / GENERAL_MESSAGE), assigneeName, project, '\n",
+    f"    'title, deadline, priority, progressPercent. Use null for unknown fields.'\n",
+    f")\n",
+    "\n",
+    "def build_prompt(message):\n",
+    "    return (\n",
+    "        '### System:\\n' + SYSTEM_MSG\n",
+    "        + '\\n\\n### Message:\\n' + message\n",
+    "        + '\\n\\n### Response:\\n'\n",
+    "    )\n",
+    "\n",
+    "def run_inference(message, max_new_tokens=150):\n",
+    "    prompt = build_prompt(message)\n",
+    "    inputs = tokenizer(prompt, return_tensors='pt').to(model.device)\n",
+    "    model.eval()\n",
+    "    with torch.no_grad():\n",
+    "        out = model.generate(\n",
+    "            **inputs,\n",
+    "            max_new_tokens=max_new_tokens,\n",
+    "            do_sample=False,\n",
+    "            pad_token_id=tokenizer.eos_token_id,\n",
+    "        )\n",
+    "    gen = out[0][inputs['input_ids'].shape[1]:]\n",
+    "    return tokenizer.decode(gen, skip_special_tokens=True).strip()\n",
+    "\n",
+    "TEST_MESSAGES = [\n",
+    "    '@Agrim fix the growstreams deck ASAP NO Delay',\n",
+    "    'done bhai, merged the PR',\n",
+    "    'login page 60% ho gaya',\n",
+    "    'getting 500 error on registration',\n",
+    "    'Sure sir ready for it',\n",
+    "]\n",
+    "\n",
+    "print('=' * 55)\n",
+    "print('TEST - BEFORE TRAINING (base model, zero fine-tuning)')\n",
+    "print('=' * 55)\n",
+    "before_results = []\n",
+    "for msg in TEST_MESSAGES:\n",
+    "    result = run_inference(msg)\n",
+    "    before_results.append(result)\n",
+    "    print(f'Input : {msg}')\n",
+    "    print(f'Output: {result[:200]}')\n",
+    "    print()\n",
+]))
+
+cells.append(code([
+    "import os\n",
+    "from datasets import Dataset\n",
+    "\n",
+    "# --- On Colab: uncomment the next 3 lines to upload your files ---\n",
+    "# from google.colab import files\n",
+    "# uploaded = files.upload()  # upload train.jsonl and valid.jsonl\n",
+    "# TRAIN_PATH, VALID_PATH = 'train.jsonl', 'valid.jsonl'\n",
+    "\n",
+    "# --- Running locally: files are already here ---\n",
+    "TRAIN_PATH = 'taskmind-data/train.jsonl'\n",
+    "VALID_PATH  = 'taskmind-data/valid.jsonl'\n",
+    "\n",
+    "def load_jsonl(path):\n",
+    "    rows = []\n",
+    "    with open(path, encoding='utf-8') as f:\n",
+    "        for line in f:\n",
+    "            line = line.strip()\n",
+    "            if line:\n",
+    "                rows.append(json.loads(line))\n",
+    "    return rows\n",
+    "\n",
+    "def format_row(ex):\n",
+    "    output_str = json.dumps(ex['output'], ensure_ascii=False)\n",
+    "    text = (\n",
+    "        '### System:\\n' + SYSTEM_MSG\n",
+    "        + '\\n\\n### Message:\\n' + ex['input']\n",
+    "        + '\\n\\n### Response:\\n' + output_str\n",
+    "    )\n",
+    "    return {'text': text}\n",
+    "\n",
+    "train_rows = [format_row(r) for r in load_jsonl(TRAIN_PATH)]\n",
+    "valid_rows  = [format_row(r) for r in load_jsonl(VALID_PATH)]\n",
+    "train_dataset = Dataset.from_list(train_rows)\n",
+    "valid_dataset  = Dataset.from_list(valid_rows)\n",
+    "\n",
+    "print(f'Train: {len(train_dataset)} examples')\n",
+    "print(f'Valid : {len(valid_dataset)} examples')\n",
+    "print('Sample (first 300 chars):')\n",
+    "print(train_dataset[0]['text'][:300])\n",
+]))
+
+cells.append(code([
+    "from peft import LoraConfig, TaskType, get_peft_model\n",
+    "from trl import SFTTrainer, SFTConfig\n",
+    "\n",
+    "lora_config = LoraConfig(\n",
+    "    r=16,\n",
+    "    lora_alpha=32,\n",
+    "    target_modules=['q_proj', 'v_proj'],\n",
+    "    lora_dropout=0.05,\n",
+    "    bias='none',\n",
+    "    task_type=TaskType.CAUSAL_LM,\n",
+    ")\n",
+    "model = get_peft_model(model, lora_config)\n",
+    "model.print_trainable_parameters()\n",
+    "\n",
+    "sft_config = SFTConfig(\n",
+    "    output_dir='out/taskmind_lora_peft',\n",
+    "    num_train_epochs=5,\n",
+    "    per_device_train_batch_size=4,\n",
+    "    gradient_accumulation_steps=2,\n",
+    "    warmup_steps=10,\n",
+    "    learning_rate=2e-4,\n",
+    "    fp16=(DEVICE == 'cuda'),\n",
+    "    logging_steps=10,\n",
+    "    eval_strategy='epoch',\n",
+    "    save_strategy='epoch',\n",
+    "    load_best_model_at_end=True,\n",
+    "    report_to='none',\n",
+    "    dataloader_pin_memory=False,\n",
+    "    dataset_text_field='text',\n",
+    "    max_length=512,\n",
+    ")\n",
+    "\n",
+    "trainer = SFTTrainer(\n",
+    "    model=model,\n",
+    "    train_dataset=train_dataset,\n",
+    "    eval_dataset=valid_dataset,\n",
+    "    processing_class=tokenizer,\n",
+    "    args=sft_config,\n",
+    ")\n",
+    "\n",
+    "print('Starting LoRA fine-tuning ...')\n",
+    "trainer.train()\n",
+    "print('Training complete.')\n",
+    "\n",
+    "trainer.model.save_pretrained('out/taskmind_lora_peft')\n",
+    "tokenizer.save_pretrained('out/taskmind_lora_peft')\n",
+    "print('Adapter saved -> out/taskmind_lora_peft/')\n",
+]))
+
+cells.append(code([
+    "print('=' * 55)\n",
+    "print('TEST - AFTER TRAINING (LoRA fine-tuned TaskMind)')\n",
+    "print('=' * 55)\n",
+    "model.eval()\n",
+    "after_results = []\n",
+    "for msg in TEST_MESSAGES:\n",
+    "    result = run_inference(msg)\n",
+    "    after_results.append(result)\n",
+    "    print(f'Input : {msg}')\n",
+    "    print(f'Output: {result[:300]}')\n",
+    "    print()\n",
+    "\n",
+    "print('=' * 55)\n",
+    "print('BEFORE vs AFTER')\n",
+    "print('=' * 55)\n",
+    "for msg, b, a in zip(TEST_MESSAGES, before_results, after_results):\n",
+    "    print(f'Msg    : {msg}')\n",
+    "    print(f'Before : {b[:120]}')\n",
+    "    print(f'After  : {a[:120]}')\n",
+    "    print()\n",
+]))
+
+cells.append(code([
+    "import os\n",
+    "from huggingface_hub import HfApi, create_repo, upload_folder\n",
+    "\n",
+    "# On Colab: set HF_TOKEN via Colab Secrets (left panel > key icon)\n",
+    "# Locally: export HF_TOKEN=hf_xxx in your shell before running\n",
+    "HF_TOKEN = os.environ.get('HF_TOKEN', '')\n",
+    "if not HF_TOKEN:\n",
+    "    raise ValueError('Set HF_TOKEN environment variable before running this cell.')\n",
+    "\n",
+    "REPO_ID = 'SatyamSinghal/taskmind-1.1b-chat-lora'\n",
+    "api = HfApi(token=HF_TOKEN)\n",
+    "create_repo(repo_id=REPO_ID, private=False, exist_ok=True, repo_type='model')\n",
+    "upload_folder(\n",
+    "    repo_id=REPO_ID,\n",
+    "    folder_path='out/taskmind_lora_peft',\n",
+    "    repo_type='model',\n",
+    "    token=HF_TOKEN,\n",
+    ")\n",
+    "print(f'Live at https://huggingface.co/{REPO_ID}')\n",
+]))
+
+nb = {
+    "nbformat": 4,
+    "nbformat_minor": 5,
+    "metadata": {
+        "kernelspec": {
+            "display_name": "Python 3",
+            "language": "python",
+            "name": "python3",
+        },
+        "language_info": {"name": "python", "version": "3.10.0"},
+        "colab": {"provenance": []},
+        "accelerator": "GPU",
+    },
+    "cells": cells,
+}
+
+out_path = "./taskmind_train.ipynb"
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(nb, f, ensure_ascii=False, indent=1)
+
+print(f"Created {out_path} ({len(cells)} cells)")

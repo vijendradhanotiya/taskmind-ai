@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  taskmind-api:
+    build: .
+    image: taskmind-api:latest
+    container_name: taskmind-api
+    ports:
+      - "8001:8001"
+    environment:
+      - BASE_MODEL=TinyLlama/TinyLlama-1.1B-Chat-v1.0
+      - ADAPTER_DIR=out/taskmind_lora_peft
+      - REQUIRE_AUTH=false
+      - RATE_LIMIT_PER_MINUTE=60
+      - MAX_BATCH_SIZE=10
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./out:/app/out:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
