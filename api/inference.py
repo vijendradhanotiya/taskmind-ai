@@ -95,25 +95,61 @@ class TaskMindModel:
             pass
         return None, False
 
+    def _run_generate(self, inputs, max_new_tokens: int, temperature: float, top_p: float):
+        do_sample = temperature > 0.0
+        gen_kwargs = dict(
+            max_new_tokens=max_new_tokens,
+            do_sample=do_sample,
+            pad_token_id=self._tokenizer.eos_token_id,
+        )
+        if do_sample:
+            gen_kwargs["temperature"] = temperature
+            gen_kwargs["top_p"] = top_p
+        with torch.no_grad():
+            out = self._model.generate(**inputs, **gen_kwargs)
+        return out
+
     def classify(self, message: str) -> tuple:
         if not self.is_loaded:
             raise RuntimeError("Model not loaded. Call .load() first.")
 
         prompt = self._build_prompt(message)
         inputs = self._tokenizer(prompt, return_tensors="pt").to(self._model.device)
-
-        with torch.no_grad():
-            out = self._model.generate(
-                **inputs,
-                max_new_tokens=settings.MAX_NEW_TOKENS,
-                do_sample=False,
-                pad_token_id=self._tokenizer.eos_token_id,
-            )
-
+        out = self._run_generate(inputs, settings.MAX_NEW_TOKENS, 0.0, 1.0)
         gen = out[0][inputs["input_ids"].shape[1]:]
         raw = self._tokenizer.decode(gen, skip_special_tokens=True).strip()
         parsed, success = self._parse_json(raw)
         return raw, parsed, success
+
+    def chat_complete(self, messages: list, max_new_tokens: int = 150,
+                      temperature: float = 0.7, top_p: float = 1.0) -> tuple:
+        if not self.is_loaded:
+            raise RuntimeError("Model not loaded.")
+
+        oai_msgs = [{"role": m["role"], "content": m["content"]} for m in messages]
+        prompt = self._tokenizer.apply_chat_template(
+            oai_msgs, tokenize=False, add_generation_prompt=True
+        )
+        inputs = self._tokenizer(prompt, return_tensors="pt").to(self._model.device)
+        prompt_tokens = inputs["input_ids"].shape[1]
+
+        out = self._run_generate(inputs, max_new_tokens, temperature, top_p)
+        gen = out[0][prompt_tokens:]
+        text = self._tokenizer.decode(gen, skip_special_tokens=True).strip()
+        return text, prompt_tokens, int(gen.shape[0])
+
+    def complete(self, prompt: str, max_new_tokens: int = 150,
+                 temperature: float = 0.7, top_p: float = 1.0) -> tuple:
+        if not self.is_loaded:
+            raise RuntimeError("Model not loaded.")
+
+        inputs = self._tokenizer(prompt, return_tensors="pt").to(self._model.device)
+        prompt_tokens = inputs["input_ids"].shape[1]
+
+        out = self._run_generate(inputs, max_new_tokens, temperature, top_p)
+        gen = out[0][prompt_tokens:]
+        text = self._tokenizer.decode(gen, skip_special_tokens=True).strip()
+        return text, prompt_tokens, int(gen.shape[0])
 
 
 model_instance = TaskMindModel()

@@ -18,11 +18,21 @@ from api.schemas import (
     BatchItem,
     BatchRequest,
     BatchResponse,
+    ChatCompletionRequest,
+    ChatCompletionResponse,
+    ChatCompletionChoice,
+    ChatMessage,
     ClassifyRequest,
     ClassifyResponse,
+    CompletionRequest,
+    CompletionResponse,
+    CompletionChoice,
     ErrorResponse,
     HealthResponse,
+    ModelInfo,
+    ModelList,
     TaskResult,
+    UsageInfo,
 )
 
 logging.basicConfig(
@@ -239,6 +249,104 @@ def batch_classify(
         results=results,
         total_latency_ms=round(total_latency, 2),
         timestamp=datetime.now(timezone.utc).isoformat(),
+    )
+
+
+@app.get("/v1/models", response_model=ModelList, tags=["OpenAI-Compatible"])
+def list_models():
+    return ModelList(data=[
+        ModelInfo(
+            id=settings.MODEL_VERSION,
+            created=int(_start_time),
+            owned_by="taskmind",
+        )
+    ])
+
+
+@app.post("/v1/chat/completions", response_model=ChatCompletionResponse, tags=["OpenAI-Compatible"])
+def chat_completions(
+    req: ChatCompletionRequest,
+    request: Request,
+    api_key: Optional[str] = Security(_verify_api_key),
+):
+    client_id = _get_client_id(request, api_key)
+    if not _check_rate_limit(client_id):
+        raise HTTPException(status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+                            detail={"error": "Rate limit exceeded", "code": "RATE_LIMITED"})
+    if not model_instance.is_loaded:
+        raise HTTPException(status_code=503, detail={"error": "Model not ready", "code": "MODEL_UNAVAILABLE"})
+    if req.stream:
+        raise HTTPException(status_code=400, detail={"error": "Streaming not supported", "code": "STREAM_UNSUPPORTED"})
+
+    request_id = getattr(request.state, "request_id", str(uuid.uuid4())[:12])
+    messages = [{"role": m.role, "content": m.content} for m in req.messages]
+
+    try:
+        text, prompt_tokens, completion_tokens = model_instance.chat_complete(
+            messages,
+            max_new_tokens=req.max_tokens or settings.MAX_NEW_TOKENS,
+            temperature=req.temperature or 0.7,
+            top_p=req.top_p or 1.0,
+        )
+    except Exception as exc:
+        logger.error("chat_complete error request_id=%s: %s", request_id, exc)
+        raise HTTPException(status_code=500, detail={"error": "Inference failed", "code": "INFERENCE_ERROR"})
+
+    return ChatCompletionResponse(
+        id=f"chatcmpl_{request_id}",
+        created=int(time.time()),
+        model=settings.MODEL_VERSION,
+        choices=[
+            ChatCompletionChoice(
+                index=0,
+                message=ChatMessage(role="assistant", content=text),
+                finish_reason="stop",
+            )
+        ],
+        usage=UsageInfo(
+            prompt_tokens=prompt_tokens,
+            completion_tokens=completion_tokens,
+            total_tokens=prompt_tokens + completion_tokens,
+        ),
+    )
+
+
+@app.post("/v1/completions", response_model=CompletionResponse, tags=["OpenAI-Compatible"])
+def completions(
+    req: CompletionRequest,
+    request: Request,
+    api_key: Optional[str] = Security(_verify_api_key),
+):
+    client_id = _get_client_id(request, api_key)
+    if not _check_rate_limit(client_id):
+        raise HTTPException(status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+                            detail={"error": "Rate limit exceeded", "code": "RATE_LIMITED"})
+    if not model_instance.is_loaded:
+        raise HTTPException(status_code=503, detail={"error": "Model not ready", "code": "MODEL_UNAVAILABLE"})
+
+    request_id = getattr(request.state, "request_id", str(uuid.uuid4())[:12])
+
+    try:
+        text, prompt_tokens, completion_tokens = model_instance.complete(
+            req.prompt,
+            max_new_tokens=req.max_tokens or settings.MAX_NEW_TOKENS,
+            temperature=req.temperature or 0.7,
+            top_p=req.top_p or 1.0,
+        )
+    except Exception as exc:
+        logger.error("complete error request_id=%s: %s", request_id, exc)
+        raise HTTPException(status_code=500, detail={"error": "Inference failed", "code": "INFERENCE_ERROR"})
+
+    return CompletionResponse(
+        id=f"cmpl_{request_id}",
+        created=int(time.time()),
+        model=settings.MODEL_VERSION,
+        choices=[CompletionChoice(text=text, index=0, finish_reason="stop")],
+        usage=UsageInfo(
+            prompt_tokens=prompt_tokens,
+            completion_tokens=completion_tokens,
+            total_tokens=prompt_tokens + completion_tokens,
+        ),
     )
 
 

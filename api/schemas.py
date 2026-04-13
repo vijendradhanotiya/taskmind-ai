@@ -79,3 +79,77 @@ class ErrorResponse(BaseModel):
     error: str
     code: str
     request_id: Optional[str] = None
+
+
+# ── OpenAI-compatible schemas ──────────────────────────────────────
+
+class ChatMessage(BaseModel):
+    role: str = Field(..., description="system | user | assistant")
+    content: str
+
+
+class ChatCompletionRequest(BaseModel):
+    model: Optional[str] = None
+    messages: List[ChatMessage] = Field(..., min_length=1)
+    max_tokens: Optional[int] = Field(150, ge=1, le=2048)
+    temperature: Optional[float] = Field(0.7, ge=0.0, le=2.0)
+    top_p: Optional[float] = Field(1.0, ge=0.0, le=1.0)
+    stream: Optional[bool] = False
+    stop: Optional[List[str]] = None
+
+
+class UsageInfo(BaseModel):
+    prompt_tokens: int
+    completion_tokens: int
+    total_tokens: int
+
+
+class ChatCompletionChoice(BaseModel):
+    index: int
+    message: ChatMessage
+    finish_reason: str = "stop"
+
+
+class ChatCompletionResponse(BaseModel):
+    id: str
+    object: str = "chat.completion"
+    created: int
+    model: str
+    choices: List[ChatCompletionChoice]
+    usage: UsageInfo
+
+
+class CompletionRequest(BaseModel):
+    model: Optional[str] = None
+    prompt: str = Field(..., min_length=1)
+    max_tokens: Optional[int] = Field(150, ge=1, le=2048)
+    temperature: Optional[float] = Field(0.7, ge=0.0, le=2.0)
+    top_p: Optional[float] = Field(1.0, ge=0.0, le=1.0)
+    stop: Optional[List[str]] = None
+
+
+class CompletionChoice(BaseModel):
+    text: str
+    index: int
+    finish_reason: str = "stop"
+
+
+class CompletionResponse(BaseModel):
+    id: str
+    object: str = "text_completion"
+    created: int
+    model: str
+    choices: List[CompletionChoice]
+    usage: UsageInfo
+
+
+class ModelInfo(BaseModel):
+    id: str
+    object: str = "model"
+    created: int
+    owned_by: str
+
+
+class ModelList(BaseModel):
+    object: str = "list"
+    data: List[ModelInfo]
