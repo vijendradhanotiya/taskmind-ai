@@ -1,0 +1,1000 @@
+{"id": 1, "domain": "task_update", "endpoint": "/v1/classify", "input": "billing module 65% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 2, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is serverless computing?", "expected_intent": null}
+{"id": 3, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is overfitting?", "expected_intent": null}
+{"id": 4, "domain": "general_completion", "endpoint": "/v1/completions", "input": "DB migration in software engineering means", "expected_intent": null}
+{"id": 5, "domain": "task_update", "endpoint": "/v1/classify", "input": "notification service 55% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 6, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Tarun please complete the auth service ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 7, "domain": "career", "endpoint": "/v1/chat/completions", "input": "What certifications help in ML career?", "expected_intent": null}
+{"id": 8, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Priya fix the billing module before EOD", "expected_intent": "TASK_ASSIGN"}
+{"id": 9, "domain": "task_done", "endpoint": "/v1/classify", "input": "PR merged for mobile app, ready for QA", "expected_intent": "TASK_DONE"}
+{"id": 10, "domain": "progress_note", "endpoint": "/v1/classify", "input": "A/B test result on search feature: variant B wins by 12%", "expected_intent": "PROGRESS_NOTE"}
+{"id": 11, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is CI/CD?", "expected_intent": null}
+{"id": 12, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "A hash map stores", "expected_intent": null}
+{"id": 13, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is a DB index?", "expected_intent": null}
+{"id": 14, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is Y Combinator?", "expected_intent": null}
+{"id": 15, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "CI is failing, can't deploy profile settings", "expected_intent": "TASK_BLOCKED"}
+{"id": 16, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Karan please complete the dashboard ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 17, "domain": "progress_note", "endpoint": "/v1/classify", "input": "EOD update: recommendation engine done, DB migration in progress", "expected_intent": "PROGRESS_NOTE"}
+{"id": 18, "domain": "general_message", "endpoint": "/v1/classify", "input": "I pushed a draft PR for early feedback", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 19, "domain": "task_done", "endpoint": "/v1/classify", "input": "admin panel hotfix deployed to prod", "expected_intent": "TASK_DONE"}
+{"id": 20, "domain": "progress_note", "endpoint": "/v1/classify", "input": "EOD update: login page done, reports module in progress", "expected_intent": "PROGRESS_NOTE"}
+{"id": 21, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is TRL for LLM training?", "expected_intent": null}
+{"id": 22, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Shiv update the documentation for payment module", "expected_intent": "TASK_ASSIGN"}
+{"id": 23, "domain": "career", "endpoint": "/v1/chat/completions", "input": "Is Kaggle important for ML jobs?", "expected_intent": null}
+{"id": 24, "domain": "general_completion", "endpoint": "/v1/completions", "input": "API integration in software engineering means", "expected_intent": null}
+{"id": 25, "domain": "general_completion", "endpoint": "/v1/completions", "input": "onboarding flow in software engineering means", "expected_intent": null}
+{"id": 26, "domain": "career", "endpoint": "/v1/chat/completions", "input": "What is MLOps and why does it matter?", "expected_intent": null}
+{"id": 27, "domain": "task_update", "endpoint": "/v1/classify", "input": "onboarding flow 40% done", "expected_intent": "TASK_UPDATE"}
+{"id": 28, "domain": "general_completion", "endpoint": "/v1/completions", "input": "profile settings in software engineering means", "expected_intent": null}
+{"id": 29, "domain": "task_update", "endpoint": "/v1/classify", "input": "DB migration 20% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 30, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "Dependency injection provides", "expected_intent": null}
+{"id": 31, "domain": "task_update", "endpoint": "/v1/classify", "input": "dashboard 55% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 32, "domain": "task_done", "endpoint": "/v1/classify", "input": "LGTM on billing module, approved and merged", "expected_intent": "TASK_DONE"}
+{"id": 33, "domain": "task_done", "endpoint": "/v1/classify", "input": "auth service hotfix deployed to prod", "expected_intent": "TASK_DONE"}
+{"id": 34, "domain": "task_done", "endpoint": "/v1/classify", "input": "PR merged for recommendation engine, ready for QA", "expected_intent": "TASK_DONE"}
+{"id": 35, "domain": "task_done", "endpoint": "/v1/classify", "input": "done bhai, dashboard merged to main", "expected_intent": "TASK_DONE"}
+{"id": 36, "domain": "task_update", "endpoint": "/v1/classify", "input": "reports module 85% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 37, "domain": "general_message", "endpoint": "/v1/classify", "input": "good morning team!", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 38, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "Difference between TCP and UDP", "expected_intent": null}
+{"id": 39, "domain": "task_update", "endpoint": "/v1/classify", "input": "DB migration 20% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 40, "domain": "career", "endpoint": "/v1/chat/completions", "input": "What is a take-home ML assignment?", "expected_intent": null}
+{"id": 41, "domain": "general_completion", "endpoint": "/v1/completions", "input": "login page in software engineering means", "expected_intent": null}
+{"id": 42, "domain": "general_completion", "endpoint": "/v1/completions", "input": "Blockchain technology works by", "expected_intent": null}
+{"id": 43, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is binary search?", "expected_intent": null}
+{"id": 44, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "A training epoch is", "expected_intent": null}
+{"id": 45, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is beam search?", "expected_intent": null}
+{"id": 46, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Vijendra please complete the recommendation engine ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 47, "domain": "progress_note", "endpoint": "/v1/classify", "input": "deploy complete, notification service is live, monitoring", "expected_intent": "PROGRESS_NOTE"}
+{"id": 48, "domain": "general_message", "endpoint": "/v1/classify", "input": "awesome work \ud83d\udd25", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 49, "domain": "general_completion", "endpoint": "/v1/completions", "input": "dashboard in software engineering means", "expected_intent": null}
+{"id": 50, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Priya the API integration is pending from your end", "expected_intent": "TASK_ASSIGN"}
+{"id": 51, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Neha please complete the onboarding flow by tomorrow", "expected_intent": "TASK_ASSIGN"}
+{"id": 52, "domain": "task_done", "endpoint": "/v1/classify", "input": "payment module shipped and live in production", "expected_intent": "TASK_DONE"}
+{"id": 53, "domain": "general_message", "endpoint": "/v1/classify", "input": "retro highlights: need better staging comms", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 54, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "Warmup steps help the optimizer", "expected_intent": null}
+{"id": 55, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "getting 500 error on checkout flow", "expected_intent": "TASK_BLOCKED"}
+{"id": 56, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is LoRA in simple terms?", "expected_intent": null}
+{"id": 57, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "CI is failing, can't deploy payment module", "expected_intent": "TASK_BLOCKED"}
+{"id": 58, "domain": "task_done", "endpoint": "/v1/classify", "input": "LGTM on API integration, approved and merged", "expected_intent": "TASK_DONE"}
+{"id": 59, "domain": "general_completion", "endpoint": "/v1/completions", "input": "admin panel in software engineering means", "expected_intent": null}
+{"id": 60, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is early stopping?", "expected_intent": null}
+{"id": 61, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Amit fix the notification service before EOD", "expected_intent": "TASK_ASSIGN"}
+{"id": 62, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is a CDN?", "expected_intent": null}
+{"id": 63, "domain": "general_completion", "endpoint": "/v1/completions", "input": "notification service in software engineering means", "expected_intent": null}
+{"id": 64, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "Purpose of a validation set", "expected_intent": null}
+{"id": 65, "domain": "general_message", "endpoint": "/v1/classify", "input": "koi nahi bhai ho jayega", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 66, "domain": "general_completion", "endpoint": "/v1/completions", "input": "mobile app in software engineering means", "expected_intent": null}
+{"id": 67, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "getting OOM error in dashboard service", "expected_intent": "TASK_BLOCKED"}
+{"id": 68, "domain": "general_completion", "endpoint": "/v1/completions", "input": "billing module in software engineering means", "expected_intent": null}
+{"id": 69, "domain": "task_update", "endpoint": "/v1/classify", "input": "billing module 30% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 70, "domain": "task_update", "endpoint": "/v1/classify", "input": "auth service 60% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 71, "domain": "general_message", "endpoint": "/v1/classify", "input": "what time is the client call?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 72, "domain": "general_message", "endpoint": "/v1/classify", "input": "will discuss in the call", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 73, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is GraphQL vs REST?", "expected_intent": null}
+{"id": 74, "domain": "progress_note", "endpoint": "/v1/classify", "input": "prod incident: login page was down for 10 mins, fixed", "expected_intent": "PROGRESS_NOTE"}
+{"id": 75, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "RNN vs Transformer differences", "expected_intent": null}
+{"id": 76, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Gaurav please complete the admin panel ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 77, "domain": "general_completion", "endpoint": "/v1/completions", "input": "DB migration in software engineering means", "expected_intent": null}
+{"id": 78, "domain": "general_completion", "endpoint": "/v1/completions", "input": "Machine learning is a branch of", "expected_intent": null}
+{"id": 79, "domain": "general_completion", "endpoint": "/v1/completions", "input": "dashboard in software engineering means", "expected_intent": null}
+{"id": 80, "domain": "general_message", "endpoint": "/v1/classify", "input": "noted!", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 81, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is type hinting?", "expected_intent": null}
+{"id": 82, "domain": "general_completion", "endpoint": "/v1/completions", "input": "dashboard in software engineering means", "expected_intent": null}
+{"id": 83, "domain": "general_completion", "endpoint": "/v1/completions", "input": "onboarding flow in software engineering means", "expected_intent": null}
+{"id": 84, "domain": "general_message", "endpoint": "/v1/classify", "input": "we're a bit over budget", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 85, "domain": "general_completion", "endpoint": "/v1/completions", "input": "CI/CD pipeline in software engineering means", "expected_intent": null}
+{"id": 86, "domain": "general_completion", "endpoint": "/v1/completions", "input": "profile settings in software engineering means", "expected_intent": null}
+{"id": 87, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is Big O notation?", "expected_intent": null}
+{"id": 88, "domain": "general_completion", "endpoint": "/v1/completions", "input": "payment module in software engineering means", "expected_intent": null}
+{"id": 89, "domain": "task_done", "endpoint": "/v1/classify", "input": "auth service feature branch merged successfully", "expected_intent": "TASK_DONE"}
+{"id": 90, "domain": "general_completion", "endpoint": "/v1/completions", "input": "profile settings in software engineering means", "expected_intent": null}
+{"id": 91, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What does a load balancer do?", "expected_intent": null}
+{"id": 92, "domain": "progress_note", "endpoint": "/v1/classify", "input": "A/B test result on admin panel: variant B wins by 12%", "expected_intent": "PROGRESS_NOTE"}
+{"id": 93, "domain": "general_completion", "endpoint": "/v1/completions", "input": "auth service in software engineering means", "expected_intent": null}
+{"id": 94, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Meera deploy the onboarding flow to staging today", "expected_intent": "TASK_ASSIGN"}
+{"id": 95, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is A/B testing?", "expected_intent": null}
+{"id": 96, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is a startup unicorn?", "expected_intent": null}
+{"id": 97, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Karan please complete the notification service ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 98, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Dev please complete the onboarding flow by tomorrow", "expected_intent": "TASK_ASSIGN"}
+{"id": 99, "domain": "general_completion", "endpoint": "/v1/completions", "input": "API integration in software engineering means", "expected_intent": null}
+{"id": 100, "domain": "task_done", "endpoint": "/v1/classify", "input": "tested recommendation engine, no issues found", "expected_intent": "TASK_DONE"}
+{"id": 101, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is the stock market?", "expected_intent": null}
+{"id": 102, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "CI/CD pipeline stuck due to missing env variables", "expected_intent": "TASK_BLOCKED"}
+{"id": 103, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "third party API down, DB migration integration stuck", "expected_intent": "TASK_BLOCKED"}
+{"id": 104, "domain": "general_completion", "endpoint": "/v1/completions", "input": "Moore's law predicts", "expected_intent": null}
+{"id": 105, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is end-to-end encryption?", "expected_intent": null}
+{"id": 106, "domain": "task_done", "endpoint": "/v1/classify", "input": "finished billing module, moving to next task", "expected_intent": "TASK_DONE"}
+{"id": 107, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "mobile app is broken, can't proceed", "expected_intent": "TASK_BLOCKED"}
+{"id": 108, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "CI/CD automates", "expected_intent": null}
+{"id": 109, "domain": "general_completion", "endpoint": "/v1/completions", "input": "notification service in software engineering means", "expected_intent": null}
+{"id": 110, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Shiv review the PR for dashboard", "expected_intent": "TASK_ASSIGN"}
+{"id": 111, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Vijendra review the PR for CI/CD pipeline", "expected_intent": "TASK_ASSIGN"}
+{"id": 112, "domain": "general_completion", "endpoint": "/v1/completions", "input": "billing module in software engineering means", "expected_intent": null}
+{"id": 113, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "Docker containers help in", "expected_intent": null}
+{"id": 114, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Tarun please complete the API integration ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 115, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Riya please complete the DB migration ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 116, "domain": "task_done", "endpoint": "/v1/classify", "input": "payment module shipped and live in production", "expected_intent": "TASK_DONE"}
+{"id": 117, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Sumit take ownership of the login page this sprint", "expected_intent": "TASK_ASSIGN"}
+{"id": 118, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "DB migration failing, blocking admin panel release", "expected_intent": "TASK_BLOCKED"}
+{"id": 119, "domain": "general_message", "endpoint": "/v1/classify", "input": "let's discuss in sprint planning", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 120, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "blocked on dashboard, waiting for credentials from vendor", "expected_intent": "TASK_BLOCKED"}
+{"id": 121, "domain": "task_done", "endpoint": "/v1/classify", "input": "tested billing module, no issues found", "expected_intent": "TASK_DONE"}
+{"id": 122, "domain": "progress_note", "endpoint": "/v1/classify", "input": "standup: worked on DB migration yesterday, continuing today", "expected_intent": "PROGRESS_NOTE"}
+{"id": 123, "domain": "general_completion", "endpoint": "/v1/completions", "input": "mobile app in software engineering means", "expected_intent": null}
+{"id": 124, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Karan write unit tests for the reports module", "expected_intent": "TASK_ASSIGN"}
+{"id": 125, "domain": "general_completion", "endpoint": "/v1/completions", "input": "onboarding flow in software engineering means", "expected_intent": null}
+{"id": 126, "domain": "general_completion", "endpoint": "/v1/completions", "input": "The Turing test evaluates", "expected_intent": null}
+{"id": 127, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "The singleton pattern ensures", "expected_intent": null}
+{"id": 128, "domain": "general_completion", "endpoint": "/v1/completions", "input": "admin panel in software engineering means", "expected_intent": null}
+{"id": 129, "domain": "general_completion", "endpoint": "/v1/completions", "input": "DB migration in software engineering means", "expected_intent": null}
+{"id": 130, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Divya fix the onboarding flow before EOD", "expected_intent": "TASK_ASSIGN"}
+{"id": 131, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is the difference between UI and UX?", "expected_intent": null}
+{"id": 132, "domain": "task_done", "endpoint": "/v1/classify", "input": "search feature is done, pushed to staging", "expected_intent": "TASK_DONE"}
+{"id": 133, "domain": "general_message", "endpoint": "/v1/classify", "input": "joining in 5 mins", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 134, "domain": "general_completion", "endpoint": "/v1/completions", "input": "API integration in software engineering means", "expected_intent": null}
+{"id": 135, "domain": "general_completion", "endpoint": "/v1/completions", "input": "End-to-end encryption ensures", "expected_intent": null}
+{"id": 136, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "staging env misconfigured, all billing module tests failing", "expected_intent": "TASK_BLOCKED"}
+{"id": 137, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "can't start auth service without product spec", "expected_intent": "TASK_BLOCKED"}
+{"id": 138, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is a transformer model?", "expected_intent": null}
+{"id": 139, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Divya please complete the search feature ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 140, "domain": "general_completion", "endpoint": "/v1/completions", "input": "admin panel in software engineering means", "expected_intent": null}
+{"id": 141, "domain": "progress_note", "endpoint": "/v1/classify", "input": "standup: worked on dashboard yesterday, continuing today", "expected_intent": "PROGRESS_NOTE"}
+{"id": 142, "domain": "general_message", "endpoint": "/v1/classify", "input": "sounds good to me", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 143, "domain": "task_update", "endpoint": "/v1/classify", "input": "notification service 60% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 144, "domain": "task_done", "endpoint": "/v1/classify", "input": "profile settings is done, pushed to staging", "expected_intent": "TASK_DONE"}
+{"id": 145, "domain": "business_completion", "endpoint": "/v1/completions", "input": "Churn rate measures", "expected_intent": null}
+{"id": 146, "domain": "task_done", "endpoint": "/v1/classify", "input": "completed admin panel, all tests passing", "expected_intent": "TASK_DONE"}
+{"id": 147, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What are activation functions?", "expected_intent": null}
+{"id": 148, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Shiv please complete the DB migration ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 149, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is eventual consistency?", "expected_intent": null}
+{"id": 150, "domain": "task_update", "endpoint": "/v1/classify", "input": "mobile app 65% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 151, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "RLHF stands for", "expected_intent": null}
+{"id": 152, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is quantum computing?", "expected_intent": null}
+{"id": 153, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "The eval dataset is used to", "expected_intent": null}
+{"id": 154, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Nisha please complete the profile settings ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 155, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "The context window of an LLM is", "expected_intent": null}
+{"id": 156, "domain": "productivity", "endpoint": "/v1/chat/completions", "input": "How to stay focused while working remotely?", "expected_intent": null}
+{"id": 157, "domain": "business_completion", "endpoint": "/v1/completions", "input": "Customer lifetime value is calculated by", "expected_intent": null}
+{"id": 158, "domain": "task_update", "endpoint": "/v1/classify", "input": "login page 55% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 159, "domain": "career", "endpoint": "/v1/chat/completions", "input": "How to write a technical blog post for visibility?", "expected_intent": null}
+{"id": 160, "domain": "general_message", "endpoint": "/v1/classify", "input": "that makes sense, thanks!", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 161, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "A transformer model is", "expected_intent": null}
+{"id": 162, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Pooja please complete the reports module ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 163, "domain": "task_done", "endpoint": "/v1/classify", "input": "tested API integration, no issues found", "expected_intent": "TASK_DONE"}
+{"id": 164, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is a design pattern?", "expected_intent": null}
+{"id": 165, "domain": "task_done", "endpoint": "/v1/classify", "input": "admin panel feature branch merged successfully", "expected_intent": "TASK_DONE"}
+{"id": 166, "domain": "progress_note", "endpoint": "/v1/classify", "input": "load test: billing module stable at 800 rps", "expected_intent": "PROGRESS_NOTE"}
+{"id": 167, "domain": "general_completion", "endpoint": "/v1/completions", "input": "recommendation engine in software engineering means", "expected_intent": null}
+{"id": 168, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Ankur update the documentation for DB migration", "expected_intent": "TASK_ASSIGN"}
+{"id": 169, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Meera please complete the DB migration ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 170, "domain": "progress_note", "endpoint": "/v1/classify", "input": "load test: payment module stable at 800 rps", "expected_intent": "PROGRESS_NOTE"}
+{"id": 171, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is RAG for LLMs?", "expected_intent": null}
+{"id": 172, "domain": "general_message", "endpoint": "/v1/classify", "input": "bhai chai pi ke aao", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 173, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Riya please complete the dashboard ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 174, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is layer normalisation?", "expected_intent": null}
+{"id": 175, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Arpit please complete the billing module ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 176, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Dev take ownership of the admin panel this sprint", "expected_intent": "TASK_ASSIGN"}
+{"id": 177, "domain": "general_message", "endpoint": "/v1/classify", "input": "thanks bhai", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 178, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Himanshu handle the client feedback on onboarding flow", "expected_intent": "TASK_ASSIGN"}
+{"id": 179, "domain": "general_completion", "endpoint": "/v1/completions", "input": "Web3 is built on", "expected_intent": null}
+{"id": 180, "domain": "task_done", "endpoint": "/v1/classify", "input": "PR merged for onboarding flow, ready for QA", "expected_intent": "TASK_DONE"}
+{"id": 181, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "staging env misconfigured, all admin panel tests failing", "expected_intent": "TASK_BLOCKED"}
+{"id": 182, "domain": "general_message", "endpoint": "/v1/classify", "input": "ek baar check karo", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 183, "domain": "task_update", "endpoint": "/v1/classify", "input": "search feature 90% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 184, "domain": "general_completion", "endpoint": "/v1/completions", "input": "API integration in software engineering means", "expected_intent": null}
+{"id": 185, "domain": "general_completion", "endpoint": "/v1/completions", "input": "DB migration in software engineering means", "expected_intent": null}
+{"id": 186, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is a training checkpoint?", "expected_intent": null}
+{"id": 187, "domain": "general_completion", "endpoint": "/v1/completions", "input": "recommendation engine in software engineering means", "expected_intent": null}
+{"id": 188, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "third party API down, billing module integration stuck", "expected_intent": "TASK_BLOCKED"}
+{"id": 189, "domain": "productivity", "endpoint": "/v1/chat/completions", "input": "How to run an effective sprint retrospective?", "expected_intent": null}
+{"id": 190, "domain": "progress_note", "endpoint": "/v1/classify", "input": "prod incident: CI/CD pipeline was down for 10 mins, fixed", "expected_intent": "PROGRESS_NOTE"}
+{"id": 191, "domain": "task_done", "endpoint": "/v1/classify", "input": "LGTM on admin panel, approved and merged", "expected_intent": "TASK_DONE"}
+{"id": 192, "domain": "general_completion", "endpoint": "/v1/completions", "input": "First principles thinking involves", "expected_intent": null}
+{"id": 193, "domain": "career", "endpoint": "/v1/chat/completions", "input": "What is the best way to showcase a fine-tuning project?", "expected_intent": null}
+{"id": 194, "domain": "general_completion", "endpoint": "/v1/completions", "input": "onboarding flow in software engineering means", "expected_intent": null}
+{"id": 195, "domain": "general_completion", "endpoint": "/v1/completions", "input": "API integration in software engineering means", "expected_intent": null}
+{"id": 196, "domain": "general_completion", "endpoint": "/v1/completions", "input": "admin panel in software engineering means", "expected_intent": null}
+{"id": 197, "domain": "task_update", "endpoint": "/v1/classify", "input": "DB migration 80% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 198, "domain": "progress_note", "endpoint": "/v1/classify", "input": "sprint at 60%, login page on track", "expected_intent": "PROGRESS_NOTE"}
+{"id": 199, "domain": "general_completion", "endpoint": "/v1/completions", "input": "SCRUM is a framework for", "expected_intent": null}
+{"id": 200, "domain": "general_completion", "endpoint": "/v1/completions", "input": "login page in software engineering means", "expected_intent": null}
+{"id": 201, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Amit please review and merge the recommendation engine PR", "expected_intent": "TASK_ASSIGN"}
+{"id": 202, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "staging env misconfigured, all onboarding flow tests failing", "expected_intent": "TASK_BLOCKED"}
+{"id": 203, "domain": "general_completion", "endpoint": "/v1/completions", "input": "profile settings in software engineering means", "expected_intent": null}
+{"id": 204, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is transfer learning?", "expected_intent": null}
+{"id": 205, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is a vector database?", "expected_intent": null}
+{"id": 206, "domain": "task_update", "endpoint": "/v1/classify", "input": "CI/CD pipeline 85% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 207, "domain": "task_update", "endpoint": "/v1/classify", "input": "admin panel 85% done", "expected_intent": "TASK_UPDATE"}
+{"id": 208, "domain": "general_message", "endpoint": "/v1/classify", "input": "kal chutti hai", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 209, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Rahul please complete the dashboard by tomorrow", "expected_intent": "TASK_ASSIGN"}
+{"id": 210, "domain": "general_message", "endpoint": "/v1/classify", "input": "is the office open Monday?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 211, "domain": "progress_note", "endpoint": "/v1/classify", "input": "A/B test result on recommendation engine: variant B wins by 12%", "expected_intent": "PROGRESS_NOTE"}
+{"id": 212, "domain": "general_completion", "endpoint": "/v1/completions", "input": "Compound interest grows because", "expected_intent": null}
+{"id": 213, "domain": "progress_note", "endpoint": "/v1/classify", "input": "postmortem: onboarding flow outage caused by config change", "expected_intent": "PROGRESS_NOTE"}
+{"id": 214, "domain": "general_completion", "endpoint": "/v1/completions", "input": "Quantum computing uses", "expected_intent": null}
+{"id": 215, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is a JWT token?", "expected_intent": null}
+{"id": 216, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is photosynthesis?", "expected_intent": null}
+{"id": 217, "domain": "task_update", "endpoint": "/v1/classify", "input": "payment module 90% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 218, "domain": "general_message", "endpoint": "/v1/classify", "input": "kal discuss karte hain", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 219, "domain": "general_message", "endpoint": "/v1/classify", "input": "where is the postman collection?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 220, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "Instruction tuning teaches the model to", "expected_intent": null}
+{"id": 221, "domain": "task_update", "endpoint": "/v1/classify", "input": "DB migration 85% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 222, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Pooja write unit tests for the reports module", "expected_intent": "TASK_ASSIGN"}
+{"id": 223, "domain": "task_done", "endpoint": "/v1/classify", "input": "auth service feature branch merged successfully", "expected_intent": "TASK_DONE"}
+{"id": 224, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Karan please complete the payment module ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 225, "domain": "general_completion", "endpoint": "/v1/completions", "input": "API integration in software engineering means", "expected_intent": null}
+{"id": 226, "domain": "business_completion", "endpoint": "/v1/completions", "input": "The north star metric for a product is", "expected_intent": null}
+{"id": 227, "domain": "general_message", "endpoint": "/v1/classify", "input": "good question, let me think", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 228, "domain": "career", "endpoint": "/v1/chat/completions", "input": "How to stay updated with ML research?", "expected_intent": null}
+{"id": 229, "domain": "general_completion", "endpoint": "/v1/completions", "input": "search feature in software engineering means", "expected_intent": null}
+{"id": 230, "domain": "general_completion", "endpoint": "/v1/completions", "input": "profile settings in software engineering means", "expected_intent": null}
+{"id": 231, "domain": "progress_note", "endpoint": "/v1/classify", "input": "weekly update: payment module shipped, starting login page", "expected_intent": "PROGRESS_NOTE"}
+{"id": 232, "domain": "general_completion", "endpoint": "/v1/completions", "input": "recommendation engine in software engineering means", "expected_intent": null}
+{"id": 233, "domain": "task_update", "endpoint": "/v1/classify", "input": "CI/CD pipeline 80% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 234, "domain": "general_completion", "endpoint": "/v1/completions", "input": "reports module in software engineering means", "expected_intent": null}
+{"id": 235, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "Caching improves performance by", "expected_intent": null}
+{"id": 236, "domain": "business_completion", "endpoint": "/v1/completions", "input": "Customer acquisition cost is", "expected_intent": null}
+{"id": 237, "domain": "progress_note", "endpoint": "/v1/classify", "input": "load test: DB migration stable at 800 rps", "expected_intent": "PROGRESS_NOTE"}
+{"id": 238, "domain": "general_completion", "endpoint": "/v1/completions", "input": "recommendation engine in software engineering means", "expected_intent": null}
+{"id": 239, "domain": "general_completion", "endpoint": "/v1/completions", "input": "Product-market fit means", "expected_intent": null}
+{"id": 240, "domain": "task_update", "endpoint": "/v1/classify", "input": "recommendation engine 90% done", "expected_intent": "TASK_UPDATE"}
+{"id": 241, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is Infrastructure as Code?", "expected_intent": null}
+{"id": 242, "domain": "task_done", "endpoint": "/v1/classify", "input": "finished payment module, moving to next task", "expected_intent": "TASK_DONE"}
+{"id": 243, "domain": "general_completion", "endpoint": "/v1/completions", "input": "profile settings in software engineering means", "expected_intent": null}
+{"id": 244, "domain": "general_completion", "endpoint": "/v1/completions", "input": "DB migration in software engineering means", "expected_intent": null}
+{"id": 245, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Karan please complete the dashboard ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 246, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "profile settings stuck due to missing env variables", "expected_intent": "TASK_BLOCKED"}
+{"id": 247, "domain": "general_completion", "endpoint": "/v1/completions", "input": "checkout flow in software engineering means", "expected_intent": null}
+{"id": 248, "domain": "general_completion", "endpoint": "/v1/completions", "input": "recommendation engine in software engineering means", "expected_intent": null}
+{"id": 249, "domain": "general_message", "endpoint": "/v1/classify", "input": "all good, no action needed", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 250, "domain": "business_completion", "endpoint": "/v1/completions", "input": "A growth hacker focuses on", "expected_intent": null}
+{"id": 251, "domain": "task_update", "endpoint": "/v1/classify", "input": "payment module 70% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 252, "domain": "task_done", "endpoint": "/v1/classify", "input": "LGTM on admin panel, approved and merged", "expected_intent": "TASK_DONE"}
+{"id": 253, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "How do you choose a learning rate?", "expected_intent": null}
+{"id": 254, "domain": "career", "endpoint": "/v1/chat/completions", "input": "How to build a personal brand as an ML engineer?", "expected_intent": null}
+{"id": 255, "domain": "general_completion", "endpoint": "/v1/completions", "input": "search feature in software engineering means", "expected_intent": null}
+{"id": 256, "domain": "task_done", "endpoint": "/v1/classify", "input": "tested API integration, no issues found", "expected_intent": "TASK_DONE"}
+{"id": 257, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Vijendra please review and merge the CI/CD pipeline PR", "expected_intent": "TASK_ASSIGN"}
+{"id": 258, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "A checkpoint saves", "expected_intent": null}
+{"id": 259, "domain": "general_completion", "endpoint": "/v1/completions", "input": "DB migration in software engineering means", "expected_intent": null}
+{"id": 260, "domain": "task_done", "endpoint": "/v1/classify", "input": "finished DB migration, moving to next task", "expected_intent": "TASK_DONE"}
+{"id": 261, "domain": "general_completion", "endpoint": "/v1/completions", "input": "API integration in software engineering means", "expected_intent": null}
+{"id": 262, "domain": "general_completion", "endpoint": "/v1/completions", "input": "search feature in software engineering means", "expected_intent": null}
+{"id": 263, "domain": "task_done", "endpoint": "/v1/classify", "input": "checkout flow feature branch merged successfully", "expected_intent": "TASK_DONE"}
+{"id": 264, "domain": "task_done", "endpoint": "/v1/classify", "input": "tested search feature, no issues found", "expected_intent": "TASK_DONE"}
+{"id": 265, "domain": "general_completion", "endpoint": "/v1/completions", "input": "API integration in software engineering means", "expected_intent": null}
+{"id": 266, "domain": "task_done", "endpoint": "/v1/classify", "input": "billing module hotfix deployed to prod", "expected_intent": "TASK_DONE"}
+{"id": 267, "domain": "task_done", "endpoint": "/v1/classify", "input": "recommendation engine hotfix deployed to prod", "expected_intent": "TASK_DONE"}
+{"id": 268, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Aditya please complete the login page ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 269, "domain": "task_update", "endpoint": "/v1/classify", "input": "mobile app 20% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 270, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "staging env misconfigured, all onboarding flow tests failing", "expected_intent": "TASK_BLOCKED"}
+{"id": 271, "domain": "general_message", "endpoint": "/v1/classify", "input": "I'll be OOO tomorrow", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 272, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "Async/await allows", "expected_intent": null}
+{"id": 273, "domain": "general_completion", "endpoint": "/v1/completions", "input": "dashboard in software engineering means", "expected_intent": null}
+{"id": 274, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Meera the recommendation engine is pending from your end", "expected_intent": "TASK_ASSIGN"}
+{"id": 275, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "can't start checkout flow without product spec", "expected_intent": "TASK_BLOCKED"}
+{"id": 276, "domain": "task_update", "endpoint": "/v1/classify", "input": "onboarding flow 50% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 277, "domain": "general_message", "endpoint": "/v1/classify", "input": "please test on iOS and Android", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 278, "domain": "task_done", "endpoint": "/v1/classify", "input": "PR merged for notification service, ready for QA", "expected_intent": "TASK_DONE"}
+{"id": 279, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "recommendation engine build failing with dependency conflict", "expected_intent": "TASK_BLOCKED"}
+{"id": 280, "domain": "general_message", "endpoint": "/v1/classify", "input": "LOL \ud83d\ude02", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 281, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is a design pattern?", "expected_intent": null}
+{"id": 282, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "getting 500 error on notification service", "expected_intent": "TASK_BLOCKED"}
+{"id": 283, "domain": "progress_note", "endpoint": "/v1/classify", "input": "deploy complete, profile settings is live, monitoring", "expected_intent": "PROGRESS_NOTE"}
+{"id": 284, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is net promoter score?", "expected_intent": null}
+{"id": 285, "domain": "task_done", "endpoint": "/v1/classify", "input": "done bhai, dashboard merged to main", "expected_intent": "TASK_DONE"}
+{"id": 286, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Siddharth please complete the auth service ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 287, "domain": "general_completion", "endpoint": "/v1/completions", "input": "API integration in software engineering means", "expected_intent": null}
+{"id": 288, "domain": "productivity", "endpoint": "/v1/chat/completions", "input": "How to do a weekly review as a developer?", "expected_intent": null}
+{"id": 289, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is Web3?", "expected_intent": null}
+{"id": 290, "domain": "task_update", "endpoint": "/v1/classify", "input": "recommendation engine 70% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 291, "domain": "task_done", "endpoint": "/v1/classify", "input": "tested reports module, no issues found", "expected_intent": "TASK_DONE"}
+{"id": 292, "domain": "general_message", "endpoint": "/v1/classify", "input": "glad that's resolved", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 293, "domain": "general_completion", "endpoint": "/v1/completions", "input": "auth service in software engineering means", "expected_intent": null}
+{"id": 294, "domain": "progress_note", "endpoint": "/v1/classify", "input": "deploy complete, notification service is live, monitoring", "expected_intent": "PROGRESS_NOTE"}
+{"id": 295, "domain": "business_completion", "endpoint": "/v1/completions", "input": "Product roadmap prioritises", "expected_intent": null}
+{"id": 296, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "A generator in Python yields", "expected_intent": null}
+{"id": 297, "domain": "general_completion", "endpoint": "/v1/completions", "input": "CI/CD pipeline in software engineering means", "expected_intent": null}
+{"id": 298, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Ankur review the PR for auth service", "expected_intent": "TASK_ASSIGN"}
+{"id": 299, "domain": "general_completion", "endpoint": "/v1/completions", "input": "checkout flow in software engineering means", "expected_intent": null}
+{"id": 300, "domain": "task_update", "endpoint": "/v1/classify", "input": "billing module 75% done", "expected_intent": "TASK_UPDATE"}
+{"id": 301, "domain": "general_completion", "endpoint": "/v1/completions", "input": "notification service in software engineering means", "expected_intent": null}
+{"id": 302, "domain": "general_completion", "endpoint": "/v1/completions", "input": "dashboard in software engineering means", "expected_intent": null}
+{"id": 303, "domain": "task_update", "endpoint": "/v1/classify", "input": "recommendation engine 60% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 304, "domain": "task_done", "endpoint": "/v1/classify", "input": "PR merged for checkout flow, ready for QA", "expected_intent": "TASK_DONE"}
+{"id": 305, "domain": "progress_note", "endpoint": "/v1/classify", "input": "release v2.1 scheduled Thursday, profile settings frozen", "expected_intent": "PROGRESS_NOTE"}
+{"id": 306, "domain": "general_completion", "endpoint": "/v1/completions", "input": "billing module in software engineering means", "expected_intent": null}
+{"id": 307, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "A load balancer distributes", "expected_intent": null}
+{"id": 308, "domain": "general_completion", "endpoint": "/v1/completions", "input": "checkout flow in software engineering means", "expected_intent": null}
+{"id": 309, "domain": "general_completion", "endpoint": "/v1/completions", "input": "profile settings in software engineering means", "expected_intent": null}
+{"id": 310, "domain": "general_completion", "endpoint": "/v1/completions", "input": "API integration in software engineering means", "expected_intent": null}
+{"id": 311, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "Redis is an in-memory store used for", "expected_intent": null}
+{"id": 312, "domain": "task_update", "endpoint": "/v1/classify", "input": "search feature 20% done", "expected_intent": "TASK_UPDATE"}
+{"id": 313, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "A LoRA adapter adds", "expected_intent": null}
+{"id": 314, "domain": "general_completion", "endpoint": "/v1/completions", "input": "Supply and demand determines", "expected_intent": null}
+{"id": 315, "domain": "task_done", "endpoint": "/v1/classify", "input": "done bhai, onboarding flow merged to main", "expected_intent": "TASK_DONE"}
+{"id": 316, "domain": "business_completion", "endpoint": "/v1/completions", "input": "A go-to-market strategy defines", "expected_intent": null}
+{"id": 317, "domain": "general_completion", "endpoint": "/v1/completions", "input": "reports module in software engineering means", "expected_intent": null}
+{"id": 318, "domain": "task_update", "endpoint": "/v1/classify", "input": "API integration 50% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 319, "domain": "task_update", "endpoint": "/v1/classify", "input": "CI/CD pipeline 90% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 320, "domain": "business_completion", "endpoint": "/v1/completions", "input": "Unit economics describe", "expected_intent": null}
+{"id": 321, "domain": "task_update", "endpoint": "/v1/classify", "input": "search feature 90% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 322, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "notification service stuck due to missing env variables", "expected_intent": "TASK_BLOCKED"}
+{"id": 323, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Rahul please complete the billing module ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 324, "domain": "career", "endpoint": "/v1/chat/completions", "input": "How to get promoted in a tech company?", "expected_intent": null}
+{"id": 325, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Ankur please complete the search feature ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 326, "domain": "general_completion", "endpoint": "/v1/completions", "input": "The capital of France is", "expected_intent": null}
+{"id": 327, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Shiv please complete the profile settings ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 328, "domain": "general_completion", "endpoint": "/v1/completions", "input": "notification service in software engineering means", "expected_intent": null}
+{"id": 329, "domain": "task_done", "endpoint": "/v1/classify", "input": "DB migration is done, pushed to staging", "expected_intent": "TASK_DONE"}
+{"id": 330, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Dev please complete the API integration ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 331, "domain": "general_completion", "endpoint": "/v1/completions", "input": "search feature in software engineering means", "expected_intent": null}
+{"id": 332, "domain": "general_completion", "endpoint": "/v1/completions", "input": "mobile app in software engineering means", "expected_intent": null}
+{"id": 333, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is a message queue?", "expected_intent": null}
+{"id": 334, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "onboarding flow build failing with dependency conflict", "expected_intent": "TASK_BLOCKED"}
+{"id": 335, "domain": "general_message", "endpoint": "/v1/classify", "input": "anyone available for a quick call?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 336, "domain": "business_completion", "endpoint": "/v1/completions", "input": "User retention is improved by", "expected_intent": null}
+{"id": 337, "domain": "general_completion", "endpoint": "/v1/completions", "input": "profile settings in software engineering means", "expected_intent": null}
+{"id": 338, "domain": "general_message", "endpoint": "/v1/classify", "input": "hahaha", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 339, "domain": "general_message", "endpoint": "/v1/classify", "input": "the slides are in shared drive", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 340, "domain": "career", "endpoint": "/v1/chat/completions", "input": "How do I get a remote US tech job from India?", "expected_intent": null}
+{"id": 341, "domain": "general_completion", "endpoint": "/v1/completions", "input": "auth service in software engineering means", "expected_intent": null}
+{"id": 342, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is instruction tuning?", "expected_intent": null}
+{"id": 343, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is an OKR?", "expected_intent": null}
+{"id": 344, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Arpit please complete the profile settings ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 345, "domain": "general_completion", "endpoint": "/v1/completions", "input": "reports module in software engineering means", "expected_intent": null}
+{"id": 346, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Neha please complete the DB migration ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 347, "domain": "business_completion", "endpoint": "/v1/completions", "input": "Product-led growth means", "expected_intent": null}
+{"id": 348, "domain": "general_message", "endpoint": "/v1/classify", "input": "see you all in standup", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 349, "domain": "productivity", "endpoint": "/v1/chat/completions", "input": "What is deep work and how to practice it?", "expected_intent": null}
+{"id": 350, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "A JWT token contains", "expected_intent": null}
+{"id": 351, "domain": "general_completion", "endpoint": "/v1/completions", "input": "API integration in software engineering means", "expected_intent": null}
+{"id": 352, "domain": "general_message", "endpoint": "/v1/classify", "input": "please update your timesheets", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 353, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is a Python virtual environment?", "expected_intent": null}
+{"id": 354, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "getting OOM error in recommendation engine service", "expected_intent": "TASK_BLOCKED"}
+{"id": 355, "domain": "general_completion", "endpoint": "/v1/completions", "input": "payment module in software engineering means", "expected_intent": null}
+{"id": 356, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Sumit onboarding flow me bug fix karo, P0 issue hai", "expected_intent": "TASK_ASSIGN"}
+{"id": 357, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is cross-entropy loss?", "expected_intent": null}
+{"id": 358, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Pooja please review and merge the mobile app PR", "expected_intent": "TASK_ASSIGN"}
+{"id": 359, "domain": "task_done", "endpoint": "/v1/classify", "input": "login page hotfix deployed to prod", "expected_intent": "TASK_DONE"}
+{"id": 360, "domain": "general_completion", "endpoint": "/v1/completions", "input": "NFTs are unique because", "expected_intent": null}
+{"id": 361, "domain": "productivity", "endpoint": "/v1/chat/completions", "input": "What is the difference between urgent and important?", "expected_intent": null}
+{"id": 362, "domain": "general_completion", "endpoint": "/v1/completions", "input": "onboarding flow in software engineering means", "expected_intent": null}
+{"id": 363, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is horizontal vs vertical scaling?", "expected_intent": null}
+{"id": 364, "domain": "general_completion", "endpoint": "/v1/completions", "input": "admin panel in software engineering means", "expected_intent": null}
+{"id": 365, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Himanshu take ownership of the recommendation engine this sprint", "expected_intent": "TASK_ASSIGN"}
+{"id": 366, "domain": "general_completion", "endpoint": "/v1/completions", "input": "auth service in software engineering means", "expected_intent": null}
+{"id": 367, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is a base model vs chat model?", "expected_intent": null}
+{"id": 368, "domain": "progress_note", "endpoint": "/v1/classify", "input": "A/B test result on DB migration: variant B wins by 12%", "expected_intent": "PROGRESS_NOTE"}
+{"id": 369, "domain": "task_done", "endpoint": "/v1/classify", "input": "LGTM on mobile app, approved and merged", "expected_intent": "TASK_DONE"}
+{"id": 370, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "can't start login page without product spec", "expected_intent": "TASK_BLOCKED"}
+{"id": 371, "domain": "progress_note", "endpoint": "/v1/classify", "input": "standup: worked on checkout flow yesterday, continuing today", "expected_intent": "PROGRESS_NOTE"}
+{"id": 372, "domain": "task_done", "endpoint": "/v1/classify", "input": "auth service feature branch merged successfully", "expected_intent": "TASK_DONE"}
+{"id": 373, "domain": "general_completion", "endpoint": "/v1/completions", "input": "API integration in software engineering means", "expected_intent": null}
+{"id": 374, "domain": "career", "endpoint": "/v1/chat/completions", "input": "How to negotiate salary as an engineer?", "expected_intent": null}
+{"id": 375, "domain": "general_completion", "endpoint": "/v1/completions", "input": "payment module in software engineering means", "expected_intent": null}
+{"id": 376, "domain": "task_done", "endpoint": "/v1/classify", "input": "done bhai, billing module merged to main", "expected_intent": "TASK_DONE"}
+{"id": 377, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Arpit CI/CD pipeline ka kaam complete karo ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 378, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "A virtual environment isolates", "expected_intent": null}
+{"id": 379, "domain": "general_completion", "endpoint": "/v1/completions", "input": "payment module in software engineering means", "expected_intent": null}
+{"id": 380, "domain": "task_update", "endpoint": "/v1/classify", "input": "auth service 55% done", "expected_intent": "TASK_UPDATE"}
+{"id": 381, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is augmented reality?", "expected_intent": null}
+{"id": 382, "domain": "general_completion", "endpoint": "/v1/completions", "input": "search feature in software engineering means", "expected_intent": null}
+{"id": 383, "domain": "general_completion", "endpoint": "/v1/completions", "input": "auth service in software engineering means", "expected_intent": null}
+{"id": 384, "domain": "general_completion", "endpoint": "/v1/completions", "input": "notification service in software engineering means", "expected_intent": null}
+{"id": 385, "domain": "task_done", "endpoint": "/v1/classify", "input": "PR merged for API integration, ready for QA", "expected_intent": "TASK_DONE"}
+{"id": 386, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "third party API down, recommendation engine integration stuck", "expected_intent": "TASK_BLOCKED"}
+{"id": 387, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is customer acquisition cost?", "expected_intent": null}
+{"id": 388, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is the greenhouse effect?", "expected_intent": null}
+{"id": 389, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is GDP?", "expected_intent": null}
+{"id": 390, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "Difference between BERT and GPT", "expected_intent": null}
+{"id": 391, "domain": "task_update", "endpoint": "/v1/classify", "input": "DB migration 60% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 392, "domain": "productivity", "endpoint": "/v1/chat/completions", "input": "How to manage multiple projects at once?", "expected_intent": null}
+{"id": 393, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Nisha please complete the admin panel ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 394, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Sumit please complete the search feature ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 395, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is nucleus sampling?", "expected_intent": null}
+{"id": 396, "domain": "general_message", "endpoint": "/v1/classify", "input": "happy to pair program if needed", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 397, "domain": "task_update", "endpoint": "/v1/classify", "input": "onboarding flow 55% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 398, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What are BOS and EOS tokens?", "expected_intent": null}
+{"id": 399, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is a training epoch?", "expected_intent": null}
+{"id": 400, "domain": "task_done", "endpoint": "/v1/classify", "input": "finished auth service, moving to next task", "expected_intent": "TASK_DONE"}
+{"id": 401, "domain": "general_completion", "endpoint": "/v1/completions", "input": "payment module in software engineering means", "expected_intent": null}
+{"id": 402, "domain": "task_done", "endpoint": "/v1/classify", "input": "search feature is done, pushed to staging", "expected_intent": "TASK_DONE"}
+{"id": 403, "domain": "general_completion", "endpoint": "/v1/completions", "input": "recommendation engine in software engineering means", "expected_intent": null}
+{"id": 404, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "Serverless computing removes", "expected_intent": null}
+{"id": 405, "domain": "general_message", "endpoint": "/v1/classify", "input": "added to backlog for next sprint", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 406, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Vijendra please complete the checkout flow ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 407, "domain": "task_done", "endpoint": "/v1/classify", "input": "payment module shipped and live in production", "expected_intent": "TASK_DONE"}
+{"id": 408, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Priya please complete the mobile app ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 409, "domain": "general_message", "endpoint": "/v1/classify", "input": "will DM you the credentials", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 410, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Amit deploy the API integration to staging today", "expected_intent": "TASK_ASSIGN"}
+{"id": 411, "domain": "general_completion", "endpoint": "/v1/completions", "input": "5G technology enables", "expected_intent": null}
+{"id": 412, "domain": "task_done", "endpoint": "/v1/classify", "input": "login page feature branch merged successfully", "expected_intent": "TASK_DONE"}
+{"id": 413, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "Who walked on the moon first?", "expected_intent": null}
+{"id": 414, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Tarun the dashboard is pending from your end", "expected_intent": "TASK_ASSIGN"}
+{"id": 415, "domain": "general_completion", "endpoint": "/v1/completions", "input": "reports module in software engineering means", "expected_intent": null}
+{"id": 416, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is 5G technology?", "expected_intent": null}
+{"id": 417, "domain": "task_update", "endpoint": "/v1/classify", "input": "search feature 80% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 418, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is edge computing?", "expected_intent": null}
+{"id": 419, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "blocked on search feature, waiting for credentials from vendor", "expected_intent": "TASK_BLOCKED"}
+{"id": 420, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is an embedding in NLP?", "expected_intent": null}
+{"id": 421, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is flash attention?", "expected_intent": null}
+{"id": 422, "domain": "task_done", "endpoint": "/v1/classify", "input": "completed profile settings, all tests passing", "expected_intent": "TASK_DONE"}
+{"id": 423, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Gaurav update the documentation for auth service", "expected_intent": "TASK_ASSIGN"}
+{"id": 424, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "Batch normalisation helps the model", "expected_intent": null}
+{"id": 425, "domain": "task_done", "endpoint": "/v1/classify", "input": "PR merged for mobile app, ready for QA", "expected_intent": "TASK_DONE"}
+{"id": 426, "domain": "general_completion", "endpoint": "/v1/completions", "input": "checkout flow in software engineering means", "expected_intent": null}
+{"id": 427, "domain": "task_update", "endpoint": "/v1/classify", "input": "notification service 65% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 428, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is model hallucination?", "expected_intent": null}
+{"id": 429, "domain": "general_completion", "endpoint": "/v1/completions", "input": "Agile methodology focuses on", "expected_intent": null}
+{"id": 430, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is the vanishing gradient problem?", "expected_intent": null}
+{"id": 431, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is customer lifetime value?", "expected_intent": null}
+{"id": 432, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "Authentication vs authorisation", "expected_intent": null}
+{"id": 433, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "getting 500 error on API integration", "expected_intent": "TASK_BLOCKED"}
+{"id": 434, "domain": "task_update", "endpoint": "/v1/classify", "input": "DB migration 80% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 435, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is MPS on Apple Silicon?", "expected_intent": null}
+{"id": 436, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "waiting for DevOps to unblock checkout flow", "expected_intent": "TASK_BLOCKED"}
+{"id": 437, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is a database deadlock?", "expected_intent": null}
+{"id": 438, "domain": "general_message", "endpoint": "/v1/classify", "input": "sorry for the noise", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 439, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Dev handle the client feedback on payment module", "expected_intent": "TASK_ASSIGN"}
+{"id": 440, "domain": "general_completion", "endpoint": "/v1/completions", "input": "billing module in software engineering means", "expected_intent": null}
+{"id": 441, "domain": "productivity", "endpoint": "/v1/chat/completions", "input": "What is time blocking?", "expected_intent": null}
+{"id": 442, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "OAuth 2.0 is a protocol for", "expected_intent": null}
+{"id": 443, "domain": "general_completion", "endpoint": "/v1/completions", "input": "login page in software engineering means", "expected_intent": null}
+{"id": 444, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "Gradient descent is an algorithm that", "expected_intent": null}
+{"id": 445, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Sumit please complete the billing module ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 446, "domain": "general_completion", "endpoint": "/v1/completions", "input": "CI/CD pipeline in software engineering means", "expected_intent": null}
+{"id": 447, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Sumit handle the client feedback on payment module", "expected_intent": "TASK_ASSIGN"}
+{"id": 448, "domain": "general_completion", "endpoint": "/v1/completions", "input": "onboarding flow in software engineering means", "expected_intent": null}
+{"id": 449, "domain": "task_update", "endpoint": "/v1/classify", "input": "checkout flow 50% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 450, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "A webhook is triggered when", "expected_intent": null}
+{"id": 451, "domain": "task_done", "endpoint": "/v1/classify", "input": "finished CI/CD pipeline, moving to next task", "expected_intent": "TASK_DONE"}
+{"id": 452, "domain": "progress_note", "endpoint": "/v1/classify", "input": "EOD update: CI/CD pipeline done, DB migration in progress", "expected_intent": "PROGRESS_NOTE"}
+{"id": 453, "domain": "task_done", "endpoint": "/v1/classify", "input": "done bhai, payment module merged to main", "expected_intent": "TASK_DONE"}
+{"id": 454, "domain": "task_done", "endpoint": "/v1/classify", "input": "notification service hotfix deployed to prod", "expected_intent": "TASK_DONE"}
+{"id": 455, "domain": "general_completion", "endpoint": "/v1/completions", "input": "admin panel in software engineering means", "expected_intent": null}
+{"id": 456, "domain": "general_completion", "endpoint": "/v1/completions", "input": "admin panel in software engineering means", "expected_intent": null}
+{"id": 457, "domain": "general_completion", "endpoint": "/v1/completions", "input": "admin panel in software engineering means", "expected_intent": null}
+{"id": 458, "domain": "task_done", "endpoint": "/v1/classify", "input": "LGTM on notification service, approved and merged", "expected_intent": "TASK_DONE"}
+{"id": 459, "domain": "task_done", "endpoint": "/v1/classify", "input": "checkout flow hotfix deployed to prod", "expected_intent": "TASK_DONE"}
+{"id": 460, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is SFT training?", "expected_intent": null}
+{"id": 461, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is a shallow vs deep copy?", "expected_intent": null}
+{"id": 462, "domain": "progress_note", "endpoint": "/v1/classify", "input": "weekly update: login page shipped, starting payment module", "expected_intent": "PROGRESS_NOTE"}
+{"id": 463, "domain": "general_completion", "endpoint": "/v1/completions", "input": "login page in software engineering means", "expected_intent": null}
+{"id": 464, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is the speed of light?", "expected_intent": null}
+{"id": 465, "domain": "general_completion", "endpoint": "/v1/completions", "input": "auth service in software engineering means", "expected_intent": null}
+{"id": 466, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is a monopoly?", "expected_intent": null}
+{"id": 467, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Gaurav please complete the search feature ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 468, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Nisha search feature ka kaam complete karo ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 469, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "Knowledge distillation is", "expected_intent": null}
+{"id": 470, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is Pydantic used for?", "expected_intent": null}
+{"id": 471, "domain": "general_completion", "endpoint": "/v1/completions", "input": "admin panel in software engineering means", "expected_intent": null}
+{"id": 472, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Gaurav please complete the auth service ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 473, "domain": "general_message", "endpoint": "/v1/classify", "input": "is the retro still at 5pm?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 474, "domain": "productivity", "endpoint": "/v1/chat/completions", "input": "What is the Eisenhower matrix?", "expected_intent": null}
+{"id": 475, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Jatin please complete the auth service by tomorrow", "expected_intent": "TASK_ASSIGN"}
+{"id": 476, "domain": "general_completion", "endpoint": "/v1/completions", "input": "auth service in software engineering means", "expected_intent": null}
+{"id": 477, "domain": "task_done", "endpoint": "/v1/classify", "input": "finished mobile app, moving to next task", "expected_intent": "TASK_DONE"}
+{"id": 478, "domain": "general_message", "endpoint": "/v1/classify", "input": "waiting for meeting to start", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 479, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is an ORM?", "expected_intent": null}
+{"id": 480, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is gradient descent?", "expected_intent": null}
+{"id": 481, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "getting OOM error in onboarding flow service", "expected_intent": "TASK_BLOCKED"}
+{"id": 482, "domain": "general_completion", "endpoint": "/v1/completions", "input": "profile settings in software engineering means", "expected_intent": null}
+{"id": 483, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "The attention mechanism works by", "expected_intent": null}
+{"id": 484, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "Fine-tuning a model means", "expected_intent": null}
+{"id": 485, "domain": "task_done", "endpoint": "/v1/classify", "input": "payment module is done, pushed to staging", "expected_intent": "TASK_DONE"}
+{"id": 486, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "getting OOM error in admin panel service", "expected_intent": "TASK_BLOCKED"}
+{"id": 487, "domain": "general_completion", "endpoint": "/v1/completions", "input": "A CDN improves performance by", "expected_intent": null}
+{"id": 488, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is design thinking?", "expected_intent": null}
+{"id": 489, "domain": "career", "endpoint": "/v1/chat/completions", "input": "How to contribute to open source ML projects?", "expected_intent": null}
+{"id": 490, "domain": "career", "endpoint": "/v1/chat/completions", "input": "How to find ML internships?", "expected_intent": null}
+{"id": 491, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Divya take ownership of the search feature this sprint", "expected_intent": "TASK_ASSIGN"}
+{"id": 492, "domain": "task_update", "endpoint": "/v1/classify", "input": "API integration 75% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 493, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "Memoization caches", "expected_intent": null}
+{"id": 494, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "DB migration failing, blocking recommendation engine release", "expected_intent": "TASK_BLOCKED"}
+{"id": 495, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "getting 500 error on login page", "expected_intent": "TASK_BLOCKED"}
+{"id": 496, "domain": "general_completion", "endpoint": "/v1/completions", "input": "admin panel in software engineering means", "expected_intent": null}
+{"id": 497, "domain": "general_completion", "endpoint": "/v1/completions", "input": "API integration in software engineering means", "expected_intent": null}
+{"id": 498, "domain": "general_completion", "endpoint": "/v1/completions", "input": "notification service in software engineering means", "expected_intent": null}
+{"id": 499, "domain": "general_message", "endpoint": "/v1/classify", "input": "confirmed, no blockers on my end", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 500, "domain": "task_update", "endpoint": "/v1/classify", "input": "DB migration 60% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 501, "domain": "general_completion", "endpoint": "/v1/completions", "input": "profile settings in software engineering means", "expected_intent": null}
+{"id": 502, "domain": "task_done", "endpoint": "/v1/classify", "input": "LGTM on payment module, approved and merged", "expected_intent": "TASK_DONE"}
+{"id": 503, "domain": "general_message", "endpoint": "/v1/classify", "input": "roger that", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 504, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Divya please complete the recommendation engine ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 505, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "Type hinting in Python allows", "expected_intent": null}
+{"id": 506, "domain": "task_done", "endpoint": "/v1/classify", "input": "completed recommendation engine, all tests passing", "expected_intent": "TASK_DONE"}
+{"id": 507, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is a microservices architecture?", "expected_intent": null}
+{"id": 508, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Arpit update the documentation for search feature", "expected_intent": "TASK_ASSIGN"}
+{"id": 509, "domain": "task_done", "endpoint": "/v1/classify", "input": "dashboard hotfix deployed to prod", "expected_intent": "TASK_DONE"}
+{"id": 510, "domain": "task_update", "endpoint": "/v1/classify", "input": "auth service 90% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 511, "domain": "general_message", "endpoint": "/v1/classify", "input": "noted, will follow up", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 512, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "getting OOM error in API integration service", "expected_intent": "TASK_BLOCKED"}
+{"id": 513, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is API rate limiting?", "expected_intent": null}
+{"id": 514, "domain": "task_update", "endpoint": "/v1/classify", "input": "API integration 55% done", "expected_intent": "TASK_UPDATE"}
+{"id": 515, "domain": "general_completion", "endpoint": "/v1/completions", "input": "Inflation is caused by", "expected_intent": null}
+{"id": 516, "domain": "career", "endpoint": "/v1/chat/completions", "input": "How important is a HuggingFace profile for ML jobs?", "expected_intent": null}
+{"id": 517, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "A Python decorator wraps", "expected_intent": null}
+{"id": 518, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Karan please complete the admin panel ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 519, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "GraphQL differs from REST because", "expected_intent": null}
+{"id": 520, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "CI is failing, can't deploy recommendation engine", "expected_intent": "TASK_BLOCKED"}
+{"id": 521, "domain": "business_completion", "endpoint": "/v1/completions", "input": "A SaaS product is", "expected_intent": null}
+{"id": 522, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Karan CI/CD pipeline me bug fix karo, P0 issue hai", "expected_intent": "TASK_ASSIGN"}
+{"id": 523, "domain": "general_message", "endpoint": "/v1/classify", "input": "same here", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 524, "domain": "progress_note", "endpoint": "/v1/classify", "input": "standup: worked on onboarding flow yesterday, continuing today", "expected_intent": "PROGRESS_NOTE"}
+{"id": 525, "domain": "general_completion", "endpoint": "/v1/completions", "input": "reports module in software engineering means", "expected_intent": null}
+{"id": 526, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is big data?", "expected_intent": null}
+{"id": 527, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "waiting for DevOps to unblock recommendation engine", "expected_intent": "TASK_BLOCKED"}
+{"id": 528, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Pooja please complete the CI/CD pipeline ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 529, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is inflation?", "expected_intent": null}
+{"id": 530, "domain": "progress_note", "endpoint": "/v1/classify", "input": "weekly update: admin panel shipped, starting dashboard", "expected_intent": "PROGRESS_NOTE"}
+{"id": 531, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Arpit please complete the mobile app ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 532, "domain": "general_message", "endpoint": "/v1/classify", "input": "who reviewed this PR?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 533, "domain": "general_completion", "endpoint": "/v1/completions", "input": "CI/CD pipeline in software engineering means", "expected_intent": null}
+{"id": 534, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Arpit please complete the checkout flow ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 535, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "Difference between ML and AI", "expected_intent": null}
+{"id": 536, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Neha please complete the API integration ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 537, "domain": "general_message", "endpoint": "/v1/classify", "input": "please add me to the meeting", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 538, "domain": "task_done", "endpoint": "/v1/classify", "input": "billing module shipped and live in production", "expected_intent": "TASK_DONE"}
+{"id": 539, "domain": "general_completion", "endpoint": "/v1/completions", "input": "profile settings in software engineering means", "expected_intent": null}
+{"id": 540, "domain": "business_completion", "endpoint": "/v1/completions", "input": "A freemium model offers", "expected_intent": null}
+{"id": 541, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is weight decay?", "expected_intent": null}
+{"id": 542, "domain": "general_message", "endpoint": "/v1/classify", "input": "back from lunch", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 543, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "DB migration stuck due to missing env variables", "expected_intent": "TASK_BLOCKED"}
+{"id": 544, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Karan please complete the onboarding flow ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 545, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "RAG combines", "expected_intent": null}
+{"id": 546, "domain": "progress_note", "endpoint": "/v1/classify", "input": "release v2.1 scheduled Thursday, profile settings frozen", "expected_intent": "PROGRESS_NOTE"}
+{"id": 547, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is SCRUM?", "expected_intent": null}
+{"id": 548, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "DB migration failing, blocking profile settings release", "expected_intent": "TASK_BLOCKED"}
+{"id": 549, "domain": "general_message", "endpoint": "/v1/classify", "input": "anyone free for a quick sync?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 550, "domain": "task_update", "endpoint": "/v1/classify", "input": "DB migration 75% done", "expected_intent": "TASK_UPDATE"}
+{"id": 551, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is the CAP theorem?", "expected_intent": null}
+{"id": 552, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "Why is FastAPI fast?", "expected_intent": null}
+{"id": 553, "domain": "task_update", "endpoint": "/v1/classify", "input": "login page 30% done", "expected_intent": "TASK_UPDATE"}
+{"id": 554, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "Token accuracy measures", "expected_intent": null}
+{"id": 555, "domain": "general_completion", "endpoint": "/v1/completions", "input": "profile settings in software engineering means", "expected_intent": null}
+{"id": 556, "domain": "general_message", "endpoint": "/v1/classify", "input": "anyone on call this weekend?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 557, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "Explain RLHF simply", "expected_intent": null}
+{"id": 558, "domain": "career", "endpoint": "/v1/chat/completions", "input": "Is LeetCode important for ML roles?", "expected_intent": null}
+{"id": 559, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "blocked on billing module, waiting for credentials from vendor", "expected_intent": "TASK_BLOCKED"}
+{"id": 560, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "The base model contains", "expected_intent": null}
+{"id": 561, "domain": "productivity", "endpoint": "/v1/chat/completions", "input": "What is the best note-taking system for engineers?", "expected_intent": null}
+{"id": 562, "domain": "general_completion", "endpoint": "/v1/completions", "input": "API integration in software engineering means", "expected_intent": null}
+{"id": 563, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is a webhook?", "expected_intent": null}
+{"id": 564, "domain": "general_completion", "endpoint": "/v1/completions", "input": "recommendation engine in software engineering means", "expected_intent": null}
+{"id": 565, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is a Python generator?", "expected_intent": null}
+{"id": 566, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Ankur please complete the mobile app ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 567, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is Agile methodology?", "expected_intent": null}
+{"id": 568, "domain": "general_completion", "endpoint": "/v1/completions", "input": "dashboard in software engineering means", "expected_intent": null}
+{"id": 569, "domain": "general_completion", "endpoint": "/v1/completions", "input": "search feature in software engineering means", "expected_intent": null}
+{"id": 570, "domain": "general_completion", "endpoint": "/v1/completions", "input": "The stock market allows", "expected_intent": null}
+{"id": 571, "domain": "general_completion", "endpoint": "/v1/completions", "input": "recommendation engine in software engineering means", "expected_intent": null}
+{"id": 572, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "Explain fine-tuning vs pre-training", "expected_intent": null}
+{"id": 573, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "An ORM maps", "expected_intent": null}
+{"id": 574, "domain": "general_message", "endpoint": "/v1/classify", "input": "have a good weekend!", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 575, "domain": "general_message", "endpoint": "/v1/classify", "input": "okay noted", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 576, "domain": "general_message", "endpoint": "/v1/classify", "input": "I had a look, approach seems solid", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 577, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is a startup pivot?", "expected_intent": null}
+{"id": 578, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Neha write unit tests for the search feature", "expected_intent": "TASK_ASSIGN"}
+{"id": 579, "domain": "general_message", "endpoint": "/v1/classify", "input": "team lunch at 1pm tomorrow", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 580, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "dashboard is broken, can't proceed", "expected_intent": "TASK_BLOCKED"}
+{"id": 581, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is dropout?", "expected_intent": null}
+{"id": 582, "domain": "general_completion", "endpoint": "/v1/completions", "input": "recommendation engine in software engineering means", "expected_intent": null}
+{"id": 583, "domain": "productivity", "endpoint": "/v1/chat/completions", "input": "What is the Pomodoro technique?", "expected_intent": null}
+{"id": 584, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is model quantization?", "expected_intent": null}
+{"id": 585, "domain": "general_message", "endpoint": "/v1/classify", "input": "interesting, I didn't know that", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 586, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Tarun please complete the DB migration ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 587, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "Why use adapters over full fine-tuning?", "expected_intent": null}
+{"id": 588, "domain": "progress_note", "endpoint": "/v1/classify", "input": "sprint at 50%, onboarding flow on track", "expected_intent": "PROGRESS_NOTE"}
+{"id": 589, "domain": "general_message", "endpoint": "/v1/classify", "input": "great sprint everyone!", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 590, "domain": "general_message", "endpoint": "/v1/classify", "input": "great job on the delivery!", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 591, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Nisha please complete the auth service ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 592, "domain": "general_completion", "endpoint": "/v1/completions", "input": "mobile app in software engineering means", "expected_intent": null}
+{"id": 593, "domain": "general_completion", "endpoint": "/v1/completions", "input": "search feature in software engineering means", "expected_intent": null}
+{"id": 594, "domain": "general_message", "endpoint": "/v1/classify", "input": "thanks for the review!", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 595, "domain": "general_completion", "endpoint": "/v1/completions", "input": "dashboard in software engineering means", "expected_intent": null}
+{"id": 596, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Jatin reports module me bug fix karo, P0 issue hai", "expected_intent": "TASK_ASSIGN"}
+{"id": 597, "domain": "general_completion", "endpoint": "/v1/completions", "input": "payment module in software engineering means", "expected_intent": null}
+{"id": 598, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is blockchain technology?", "expected_intent": null}
+{"id": 599, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Rahul review the PR for auth service", "expected_intent": "TASK_ASSIGN"}
+{"id": 600, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "search feature build failing with dependency conflict", "expected_intent": "TASK_BLOCKED"}
+{"id": 601, "domain": "task_update", "endpoint": "/v1/classify", "input": "API integration coding done, writing tests now", "expected_intent": "TASK_UPDATE"}
+{"id": 602, "domain": "progress_note", "endpoint": "/v1/classify", "input": "EOD update: notification service done, DB migration in progress", "expected_intent": "PROGRESS_NOTE"}
+{"id": 603, "domain": "general_completion", "endpoint": "/v1/completions", "input": "recommendation engine in software engineering means", "expected_intent": null}
+{"id": 604, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "FastAPI is a Python framework for", "expected_intent": null}
+{"id": 605, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Riya deploy the payment module to staging today", "expected_intent": "TASK_ASSIGN"}
+{"id": 606, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Vijendra please complete the auth service ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 607, "domain": "task_done", "endpoint": "/v1/classify", "input": "PR merged for admin panel, ready for QA", "expected_intent": "TASK_DONE"}
+{"id": 608, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "The CAP theorem states that", "expected_intent": null}
+{"id": 609, "domain": "career", "endpoint": "/v1/chat/completions", "input": "How to write a cold email to a recruiter?", "expected_intent": null}
+{"id": 610, "domain": "task_done", "endpoint": "/v1/classify", "input": "profile settings is done, pushed to staging", "expected_intent": "TASK_DONE"}
+{"id": 611, "domain": "general_completion", "endpoint": "/v1/completions", "input": "dashboard in software engineering means", "expected_intent": null}
+{"id": 612, "domain": "task_update", "endpoint": "/v1/classify", "input": "mobile app 85% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 613, "domain": "general_completion", "endpoint": "/v1/completions", "input": "checkout flow in software engineering means", "expected_intent": null}
+{"id": 614, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is compound interest?", "expected_intent": null}
+{"id": 615, "domain": "task_done", "endpoint": "/v1/classify", "input": "payment module shipped and live in production", "expected_intent": "TASK_DONE"}
+{"id": 616, "domain": "general_completion", "endpoint": "/v1/completions", "input": "reports module in software engineering means", "expected_intent": null}
+{"id": 617, "domain": "task_update", "endpoint": "/v1/classify", "input": "dashboard in progress, about 90% complete", "expected_intent": "TASK_UPDATE"}
+{"id": 618, "domain": "task_update", "endpoint": "/v1/classify", "input": "payment module 85% done", "expected_intent": "TASK_UPDATE"}
+{"id": 619, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is the capital of Japan?", "expected_intent": null}
+{"id": 620, "domain": "task_done", "endpoint": "/v1/classify", "input": "LGTM on notification service, approved and merged", "expected_intent": "TASK_DONE"}
+{"id": 621, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is Kubernetes?", "expected_intent": null}
+{"id": 622, "domain": "general_completion", "endpoint": "/v1/completions", "input": "auth service in software engineering means", "expected_intent": null}
+{"id": 623, "domain": "task_done", "endpoint": "/v1/classify", "input": "admin panel feature branch merged successfully", "expected_intent": "TASK_DONE"}
+{"id": 624, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is TDD?", "expected_intent": null}
+{"id": 625, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Priya please complete the login page ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 626, "domain": "general_completion", "endpoint": "/v1/completions", "input": "admin panel in software engineering means", "expected_intent": null}
+{"id": 627, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "third party API down, mobile app integration stuck", "expected_intent": "TASK_BLOCKED"}
+{"id": 628, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Rahul DB migration me bug fix karo, P0 issue hai", "expected_intent": "TASK_ASSIGN"}
+{"id": 629, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Riya the auth service is pending from your end", "expected_intent": "TASK_ASSIGN"}
+{"id": 630, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is venture capital?", "expected_intent": null}
+{"id": 631, "domain": "task_done", "endpoint": "/v1/classify", "input": "LGTM on profile settings, approved and merged", "expected_intent": "TASK_DONE"}
+{"id": 632, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Himanshu please complete the API integration ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 633, "domain": "general_completion", "endpoint": "/v1/completions", "input": "checkout flow in software engineering means", "expected_intent": null}
+{"id": 634, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Siddharth please complete the onboarding flow ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 635, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "Binary search works by", "expected_intent": null}
+{"id": 636, "domain": "general_completion", "endpoint": "/v1/completions", "input": "CI/CD pipeline in software engineering means", "expected_intent": null}
+{"id": 637, "domain": "general_completion", "endpoint": "/v1/completions", "input": "login page in software engineering means", "expected_intent": null}
+{"id": 638, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Riya please complete the recommendation engine ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 639, "domain": "general_completion", "endpoint": "/v1/completions", "input": "A/B testing compares", "expected_intent": null}
+{"id": 640, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "SQL vs NoSQL databases", "expected_intent": null}
+{"id": 641, "domain": "progress_note", "endpoint": "/v1/classify", "input": "prod incident: DB migration was down for 10 mins, fixed", "expected_intent": "PROGRESS_NOTE"}
+{"id": 642, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "Overfitting occurs when", "expected_intent": null}
+{"id": 643, "domain": "progress_note", "endpoint": "/v1/classify", "input": "sprint at 70%, admin panel on track", "expected_intent": "PROGRESS_NOTE"}
+{"id": 644, "domain": "task_update", "endpoint": "/v1/classify", "input": "checkout flow almost done, just testing left", "expected_intent": "TASK_UPDATE"}
+{"id": 645, "domain": "general_message", "endpoint": "/v1/classify", "input": "can someone share the figma link?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 646, "domain": "general_completion", "endpoint": "/v1/completions", "input": "profile settings in software engineering means", "expected_intent": null}
+{"id": 647, "domain": "task_update", "endpoint": "/v1/classify", "input": "dashboard 65% done", "expected_intent": "TASK_UPDATE"}
+{"id": 648, "domain": "career", "endpoint": "/v1/chat/completions", "input": "What is the STAR method for interviews?", "expected_intent": null}
+{"id": 649, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Rahul write unit tests for the reports module", "expected_intent": "TASK_ASSIGN"}
+{"id": 650, "domain": "task_update", "endpoint": "/v1/classify", "input": "API integration 85% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 651, "domain": "general_completion", "endpoint": "/v1/completions", "input": "payment module in software engineering means", "expected_intent": null}
+{"id": 652, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is an NFT?", "expected_intent": null}
+{"id": 653, "domain": "general_completion", "endpoint": "/v1/completions", "input": "onboarding flow in software engineering means", "expected_intent": null}
+{"id": 654, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Rohan please complete the dashboard ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 655, "domain": "general_completion", "endpoint": "/v1/completions", "input": "recommendation engine in software engineering means", "expected_intent": null}
+{"id": 656, "domain": "general_completion", "endpoint": "/v1/completions", "input": "auth service in software engineering means", "expected_intent": null}
+{"id": 657, "domain": "general_completion", "endpoint": "/v1/completions", "input": "Edge computing processes data", "expected_intent": null}
+{"id": 658, "domain": "general_message", "endpoint": "/v1/classify", "input": "please add me to the invite", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 659, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What does __init__ do?", "expected_intent": null}
+{"id": 660, "domain": "progress_note", "endpoint": "/v1/classify", "input": "prod incident: recommendation engine was down for 10 mins, fixed", "expected_intent": "PROGRESS_NOTE"}
+{"id": 661, "domain": "general_message", "endpoint": "/v1/classify", "input": "let's keep this in the channel", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 662, "domain": "progress_note", "endpoint": "/v1/classify", "input": "load test: DB migration stable at 800 rps", "expected_intent": "PROGRESS_NOTE"}
+{"id": 663, "domain": "task_done", "endpoint": "/v1/classify", "input": "CI/CD pipeline is done, pushed to staging", "expected_intent": "TASK_DONE"}
+{"id": 664, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "List vs tuple in Python", "expected_intent": null}
+{"id": 665, "domain": "general_completion", "endpoint": "/v1/completions", "input": "mobile app in software engineering means", "expected_intent": null}
+{"id": 666, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "Rate limiting prevents", "expected_intent": null}
+{"id": 667, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Priya please complete the CI/CD pipeline ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 668, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is the attention mechanism?", "expected_intent": null}
+{"id": 669, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "getting 500 error on onboarding flow", "expected_intent": "TASK_BLOCKED"}
+{"id": 670, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Dev recommendation engine ka kaam complete karo ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 671, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Rahul please review and merge the notification service PR", "expected_intent": "TASK_ASSIGN"}
+{"id": 672, "domain": "task_done", "endpoint": "/v1/classify", "input": "completed API integration, all tests passing", "expected_intent": "TASK_DONE"}
+{"id": 673, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Jatin please complete the mobile app ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 674, "domain": "general_message", "endpoint": "/v1/classify", "input": "good night everyone", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 675, "domain": "career", "endpoint": "/v1/chat/completions", "input": "What is freelance ML consulting?", "expected_intent": null}
+{"id": 676, "domain": "general_completion", "endpoint": "/v1/completions", "input": "mobile app in software engineering means", "expected_intent": null}
+{"id": 677, "domain": "general_message", "endpoint": "/v1/classify", "input": "can we push release to tomorrow?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 678, "domain": "career", "endpoint": "/v1/chat/completions", "input": "How to prepare for an ML interview?", "expected_intent": null}
+{"id": 679, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Sumit please complete the login page ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 680, "domain": "general_completion", "endpoint": "/v1/completions", "input": "mobile app in software engineering means", "expected_intent": null}
+{"id": 681, "domain": "task_update", "endpoint": "/v1/classify", "input": "notification service 60% done", "expected_intent": "TASK_UPDATE"}
+{"id": 682, "domain": "business_completion", "endpoint": "/v1/completions", "input": "Technical debt accumulates when", "expected_intent": null}
+{"id": 683, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "waiting for DevOps to unblock onboarding flow", "expected_intent": "TASK_BLOCKED"}
+{"id": 684, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is caching?", "expected_intent": null}
+{"id": 685, "domain": "business_completion", "endpoint": "/v1/completions", "input": "A business model canvas has", "expected_intent": null}
+{"id": 686, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Dev deploy the dashboard to staging today", "expected_intent": "TASK_ASSIGN"}
+{"id": 687, "domain": "general_message", "endpoint": "/v1/classify", "input": "who owns the billing module?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 688, "domain": "general_completion", "endpoint": "/v1/completions", "input": "notification service in software engineering means", "expected_intent": null}
+{"id": 689, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Karan please complete the profile settings ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 690, "domain": "progress_note", "endpoint": "/v1/classify", "input": "weekly update: CI/CD pipeline shipped, starting admin panel", "expected_intent": "PROGRESS_NOTE"}
+{"id": 691, "domain": "business_completion", "endpoint": "/v1/completions", "input": "Monthly recurring revenue is", "expected_intent": null}
+{"id": 692, "domain": "general_completion", "endpoint": "/v1/completions", "input": "Open source software allows", "expected_intent": null}
+{"id": 693, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is the singleton pattern?", "expected_intent": null}
+{"id": 694, "domain": "task_update", "endpoint": "/v1/classify", "input": "auth service 55% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 695, "domain": "productivity", "endpoint": "/v1/chat/completions", "input": "How to estimate tasks accurately in a sprint?", "expected_intent": null}
+{"id": 696, "domain": "productivity", "endpoint": "/v1/chat/completions", "input": "What are good habits for software engineers?", "expected_intent": null}
+{"id": 697, "domain": "progress_note", "endpoint": "/v1/classify", "input": "prod incident: search feature was down for 10 mins, fixed", "expected_intent": "PROGRESS_NOTE"}
+{"id": 698, "domain": "general_message", "endpoint": "/v1/classify", "input": "I'll push fix in 10 mins", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 699, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Arpit please complete the recommendation engine ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 700, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is perplexity as a metric?", "expected_intent": null}
+{"id": 701, "domain": "task_update", "endpoint": "/v1/classify", "input": "admin panel 20% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 702, "domain": "general_completion", "endpoint": "/v1/completions", "input": "dashboard in software engineering means", "expected_intent": null}
+{"id": 703, "domain": "progress_note", "endpoint": "/v1/classify", "input": "A/B test result on DB migration: variant B wins by 12%", "expected_intent": "PROGRESS_NOTE"}
+{"id": 704, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "Python is a programming language that", "expected_intent": null}
+{"id": 705, "domain": "general_completion", "endpoint": "/v1/completions", "input": "CI/CD pipeline in software engineering means", "expected_intent": null}
+{"id": 706, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is OAuth 2.0?", "expected_intent": null}
+{"id": 707, "domain": "progress_note", "endpoint": "/v1/classify", "input": "release v2.1 scheduled Thursday, recommendation engine frozen", "expected_intent": "PROGRESS_NOTE"}
+{"id": 708, "domain": "general_completion", "endpoint": "/v1/completions", "input": "onboarding flow in software engineering means", "expected_intent": null}
+{"id": 709, "domain": "productivity", "endpoint": "/v1/chat/completions", "input": "How to avoid burnout in tech?", "expected_intent": null}
+{"id": 710, "domain": "task_update", "endpoint": "/v1/classify", "input": "reports module 90% done", "expected_intent": "TASK_UPDATE"}
+{"id": 711, "domain": "task_done", "endpoint": "/v1/classify", "input": "completed DB migration, all tests passing", "expected_intent": "TASK_DONE"}
+{"id": 712, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Shiv please complete the reports module ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 713, "domain": "general_message", "endpoint": "/v1/classify", "input": "bhai kaafi solid kaam kiya tune", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 714, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Nisha please complete the auth service ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 715, "domain": "general_completion", "endpoint": "/v1/completions", "input": "profile settings in software engineering means", "expected_intent": null}
+{"id": 716, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "Top-p sampling selects", "expected_intent": null}
+{"id": 717, "domain": "general_message", "endpoint": "/v1/classify", "input": "sprint review done, client is happy", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 718, "domain": "task_update", "endpoint": "/v1/classify", "input": "mobile app 55% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 719, "domain": "task_done", "endpoint": "/v1/classify", "input": "finished onboarding flow, moving to next task", "expected_intent": "TASK_DONE"}
+{"id": 720, "domain": "general_completion", "endpoint": "/v1/completions", "input": "recommendation engine in software engineering means", "expected_intent": null}
+{"id": 721, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What are warmup steps?", "expected_intent": null}
+{"id": 722, "domain": "general_completion", "endpoint": "/v1/completions", "input": "billing module in software engineering means", "expected_intent": null}
+{"id": 723, "domain": "progress_note", "endpoint": "/v1/classify", "input": "sprint at 65%, checkout flow on track", "expected_intent": "PROGRESS_NOTE"}
+{"id": 724, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is async/await?", "expected_intent": null}
+{"id": 725, "domain": "task_done", "endpoint": "/v1/classify", "input": "CI/CD pipeline is done, pushed to staging", "expected_intent": "TASK_DONE"}
+{"id": 726, "domain": "task_done", "endpoint": "/v1/classify", "input": "checkout flow feature branch merged successfully", "expected_intent": "TASK_DONE"}
+{"id": 727, "domain": "general_completion", "endpoint": "/v1/completions", "input": "login page in software engineering means", "expected_intent": null}
+{"id": 728, "domain": "general_completion", "endpoint": "/v1/completions", "input": "billing module in software engineering means", "expected_intent": null}
+{"id": 729, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "payment module build failing with dependency conflict", "expected_intent": "TASK_BLOCKED"}
+{"id": 730, "domain": "general_completion", "endpoint": "/v1/completions", "input": "GDP measures", "expected_intent": null}
+{"id": 731, "domain": "general_completion", "endpoint": "/v1/completions", "input": "search feature in software engineering means", "expected_intent": null}
+{"id": 732, "domain": "general_completion", "endpoint": "/v1/completions", "input": "notification service in software engineering means", "expected_intent": null}
+{"id": 733, "domain": "progress_note", "endpoint": "/v1/classify", "input": "sprint at 70%, CI/CD pipeline on track", "expected_intent": "PROGRESS_NOTE"}
+{"id": 734, "domain": "general_completion", "endpoint": "/v1/completions", "input": "notification service in software engineering means", "expected_intent": null}
+{"id": 735, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Siddharth write unit tests for the notification service", "expected_intent": "TASK_ASSIGN"}
+{"id": 736, "domain": "general_message", "endpoint": "/v1/classify", "input": "haan bilkul", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 737, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "CI is failing, can't deploy onboarding flow", "expected_intent": "TASK_BLOCKED"}
+{"id": 738, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Rahul handle the client feedback on mobile app", "expected_intent": "TASK_ASSIGN"}
+{"id": 739, "domain": "career", "endpoint": "/v1/chat/completions", "input": "Should I do a Masters or go to industry for ML?", "expected_intent": null}
+{"id": 740, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is first principles thinking?", "expected_intent": null}
+{"id": 741, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Rohan please complete the onboarding flow ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 742, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "Who founded Apple?", "expected_intent": null}
+{"id": 743, "domain": "task_done", "endpoint": "/v1/classify", "input": "completed CI/CD pipeline, all tests passing", "expected_intent": "TASK_DONE"}
+{"id": 744, "domain": "productivity", "endpoint": "/v1/chat/completions", "input": "How to improve developer productivity?", "expected_intent": null}
+{"id": 745, "domain": "general_completion", "endpoint": "/v1/completions", "input": "admin panel in software engineering means", "expected_intent": null}
+{"id": 746, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "Kubernetes is used to", "expected_intent": null}
+{"id": 747, "domain": "productivity", "endpoint": "/v1/chat/completions", "input": "What is the best way to document a codebase?", "expected_intent": null}
+{"id": 748, "domain": "general_completion", "endpoint": "/v1/completions", "input": "OKRs help teams by", "expected_intent": null}
+{"id": 749, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is Moore's law?", "expected_intent": null}
+{"id": 750, "domain": "task_done", "endpoint": "/v1/classify", "input": "tested dashboard, no issues found", "expected_intent": "TASK_DONE"}
+{"id": 751, "domain": "career", "endpoint": "/v1/chat/completions", "input": "What should a junior ML engineer's resume include?", "expected_intent": null}
+{"id": 752, "domain": "task_update", "endpoint": "/v1/classify", "input": "checkout flow 20% done", "expected_intent": "TASK_UPDATE"}
+{"id": 753, "domain": "progress_note", "endpoint": "/v1/classify", "input": "standup: worked on admin panel yesterday, continuing today", "expected_intent": "PROGRESS_NOTE"}
+{"id": 754, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is two-factor authentication?", "expected_intent": null}
+{"id": 755, "domain": "task_update", "endpoint": "/v1/classify", "input": "profile settings 65% done", "expected_intent": "TASK_UPDATE"}
+{"id": 756, "domain": "task_update", "endpoint": "/v1/classify", "input": "search feature 80% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 757, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is token accuracy?", "expected_intent": null}
+{"id": 758, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is GDPR?", "expected_intent": null}
+{"id": 759, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Shiv admin panel me bug fix karo, P0 issue hai", "expected_intent": "TASK_ASSIGN"}
+{"id": 760, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "The purpose of a tokenizer is", "expected_intent": null}
+{"id": 761, "domain": "general_completion", "endpoint": "/v1/completions", "input": "notification service in software engineering means", "expected_intent": null}
+{"id": 762, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Rohan fix the login page before EOD", "expected_intent": "TASK_ASSIGN"}
+{"id": 763, "domain": "task_update", "endpoint": "/v1/classify", "input": "DB migration 30% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 764, "domain": "progress_note", "endpoint": "/v1/classify", "input": "release v2.1 scheduled Thursday, onboarding flow frozen", "expected_intent": "PROGRESS_NOTE"}
+{"id": 765, "domain": "career", "endpoint": "/v1/chat/completions", "input": "How to give a good ML system design interview?", "expected_intent": null}
+{"id": 766, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Rahul the CI/CD pipeline is pending from your end", "expected_intent": "TASK_ASSIGN"}
+{"id": 767, "domain": "general_completion", "endpoint": "/v1/completions", "input": "Venture capital is a form of", "expected_intent": null}
+{"id": 768, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "The softmax function converts", "expected_intent": null}
+{"id": 769, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "blocked on profile settings, waiting for credentials from vendor", "expected_intent": "TASK_BLOCKED"}
+{"id": 770, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is memoization?", "expected_intent": null}
+{"id": 771, "domain": "general_completion", "endpoint": "/v1/completions", "input": "profile settings in software engineering means", "expected_intent": null}
+{"id": 772, "domain": "general_completion", "endpoint": "/v1/completions", "input": "admin panel in software engineering means", "expected_intent": null}
+{"id": 773, "domain": "general_completion", "endpoint": "/v1/completions", "input": "onboarding flow in software engineering means", "expected_intent": null}
+{"id": 774, "domain": "task_update", "endpoint": "/v1/classify", "input": "started checkout flow, halfway through", "expected_intent": "TASK_UPDATE"}
+{"id": 775, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Jatin please complete the profile settings ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 776, "domain": "general_completion", "endpoint": "/v1/completions", "input": "search feature in software engineering means", "expected_intent": null}
+{"id": 777, "domain": "progress_note", "endpoint": "/v1/classify", "input": "postmortem: notification service outage caused by config change", "expected_intent": "PROGRESS_NOTE"}
+{"id": 778, "domain": "task_done", "endpoint": "/v1/classify", "input": "API integration feature branch merged successfully", "expected_intent": "TASK_DONE"}
+{"id": 779, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "onboarding flow is broken, can't proceed", "expected_intent": "TASK_BLOCKED"}
+{"id": 780, "domain": "general_completion", "endpoint": "/v1/completions", "input": "auth service in software engineering means", "expected_intent": null}
+{"id": 781, "domain": "task_update", "endpoint": "/v1/classify", "input": "auth service 65% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 782, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "The loss function measures", "expected_intent": null}
+{"id": 783, "domain": "general_message", "endpoint": "/v1/classify", "input": "apologies for the delay", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 784, "domain": "career", "endpoint": "/v1/chat/completions", "input": "What projects help get an AI job?", "expected_intent": null}
+{"id": 785, "domain": "general_completion", "endpoint": "/v1/completions", "input": "billing module in software engineering means", "expected_intent": null}
+{"id": 786, "domain": "general_completion", "endpoint": "/v1/completions", "input": "DB migration in software engineering means", "expected_intent": null}
+{"id": 787, "domain": "general_completion", "endpoint": "/v1/completions", "input": "payment module in software engineering means", "expected_intent": null}
+{"id": 788, "domain": "general_message", "endpoint": "/v1/classify", "input": "thoda rush ho gaya aaj", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 789, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Dev please complete the billing module ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 790, "domain": "task_done", "endpoint": "/v1/classify", "input": "done bhai, dashboard merged to main", "expected_intent": "TASK_DONE"}
+{"id": 791, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "Git rebase vs merge", "expected_intent": null}
+{"id": 792, "domain": "productivity", "endpoint": "/v1/chat/completions", "input": "How to give constructive code review feedback?", "expected_intent": null}
+{"id": 793, "domain": "general_completion", "endpoint": "/v1/completions", "input": "onboarding flow in software engineering means", "expected_intent": null}
+{"id": 794, "domain": "general_message", "endpoint": "/v1/classify", "input": "how is everyone doing?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 795, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Arpit fix the notification service before EOD", "expected_intent": "TASK_ASSIGN"}
+{"id": 796, "domain": "productivity", "endpoint": "/v1/chat/completions", "input": "What are the best tools for async team communication?", "expected_intent": null}
+{"id": 797, "domain": "task_update", "endpoint": "/v1/classify", "input": "onboarding flow 20% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 798, "domain": "general_message", "endpoint": "/v1/classify", "input": "can we get access to staging?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 799, "domain": "task_update", "endpoint": "/v1/classify", "input": "API integration 50% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 800, "domain": "career", "endpoint": "/v1/chat/completions", "input": "How to transition from backend to ML engineering?", "expected_intent": null}
+{"id": 801, "domain": "general_completion", "endpoint": "/v1/completions", "input": "search feature in software engineering means", "expected_intent": null}
+{"id": 802, "domain": "task_update", "endpoint": "/v1/classify", "input": "working on login page, should be done by EOD", "expected_intent": "TASK_UPDATE"}
+{"id": 803, "domain": "task_done", "endpoint": "/v1/classify", "input": "completed checkout flow, all tests passing", "expected_intent": "TASK_DONE"}
+{"id": 804, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is recursion?", "expected_intent": null}
+{"id": 805, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "Explain training loss vs eval loss", "expected_intent": null}
+{"id": 806, "domain": "task_update", "endpoint": "/v1/classify", "input": "onboarding flow 85% complete, on track for Friday", "expected_intent": "TASK_UPDATE"}
+{"id": 807, "domain": "productivity", "endpoint": "/v1/chat/completions", "input": "What are the best books for software engineers?", "expected_intent": null}
+{"id": 808, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is the Turing test?", "expected_intent": null}
+{"id": 809, "domain": "progress_note", "endpoint": "/v1/classify", "input": "postmortem: auth service outage caused by config change", "expected_intent": "PROGRESS_NOTE"}
+{"id": 810, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "SaaS vs PaaS vs IaaS", "expected_intent": null}
+{"id": 811, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Rohan please complete the mobile app ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 812, "domain": "task_done", "endpoint": "/v1/classify", "input": "PR merged for CI/CD pipeline, ready for QA", "expected_intent": "TASK_DONE"}
+{"id": 813, "domain": "task_done", "endpoint": "/v1/classify", "input": "finished admin panel, moving to next task", "expected_intent": "TASK_DONE"}
+{"id": 814, "domain": "task_done", "endpoint": "/v1/classify", "input": "dashboard hotfix deployed to prod", "expected_intent": "TASK_DONE"}
+{"id": 815, "domain": "general_completion", "endpoint": "/v1/completions", "input": "onboarding flow in software engineering means", "expected_intent": null}
+{"id": 816, "domain": "productivity", "endpoint": "/v1/chat/completions", "input": "How to conduct a technical interview as an interviewer?", "expected_intent": null}
+{"id": 817, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "Unit tests vs integration tests", "expected_intent": null}
+{"id": 818, "domain": "general_message", "endpoint": "/v1/classify", "input": "zoom link?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 819, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "Explain cosine LR schedule", "expected_intent": null}
+{"id": 820, "domain": "task_update", "endpoint": "/v1/classify", "input": "search feature 40% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 821, "domain": "task_done", "endpoint": "/v1/classify", "input": "notification service shipped and live in production", "expected_intent": "TASK_DONE"}
+{"id": 822, "domain": "general_message", "endpoint": "/v1/classify", "input": "please don't push to main directly", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 823, "domain": "progress_note", "endpoint": "/v1/classify", "input": "weekly update: onboarding flow shipped, starting dashboard", "expected_intent": "PROGRESS_NOTE"}
+{"id": 824, "domain": "progress_note", "endpoint": "/v1/classify", "input": "EOD update: login page done, CI/CD pipeline in progress", "expected_intent": "PROGRESS_NOTE"}
+{"id": 825, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "blocked on notification service, waiting for credentials from vendor", "expected_intent": "TASK_BLOCKED"}
+{"id": 826, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Aditya update the documentation for checkout flow", "expected_intent": "TASK_ASSIGN"}
+{"id": 827, "domain": "general_completion", "endpoint": "/v1/completions", "input": "billing module in software engineering means", "expected_intent": null}
+{"id": 828, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "billing module build failing with dependency conflict", "expected_intent": "TASK_BLOCKED"}
+{"id": 829, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Arpit please review and merge the profile settings PR", "expected_intent": "TASK_ASSIGN"}
+{"id": 830, "domain": "general_completion", "endpoint": "/v1/completions", "input": "DB migration in software engineering means", "expected_intent": null}
+{"id": 831, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "billing module is broken, can't proceed", "expected_intent": "TASK_BLOCKED"}
+{"id": 832, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "The learning rate controls", "expected_intent": null}
+{"id": 833, "domain": "task_done", "endpoint": "/v1/classify", "input": "finished dashboard, moving to next task", "expected_intent": "TASK_DONE"}
+{"id": 834, "domain": "general_message", "endpoint": "/v1/classify", "input": "who is the DRI for this?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 835, "domain": "general_completion", "endpoint": "/v1/completions", "input": "payment module in software engineering means", "expected_intent": null}
+{"id": 836, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "Apple Silicon uses MPS which stands for", "expected_intent": null}
+{"id": 837, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is brand loyalty?", "expected_intent": null}
+{"id": 838, "domain": "general_completion", "endpoint": "/v1/completions", "input": "The MVP in product development is", "expected_intent": null}
+{"id": 839, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Amit please complete the onboarding flow ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 840, "domain": "general_message", "endpoint": "/v1/classify", "input": "meeting rescheduled to 4pm", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 841, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Vijendra please complete the notification service ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 842, "domain": "general_completion", "endpoint": "/v1/completions", "input": "dashboard in software engineering means", "expected_intent": null}
+{"id": 843, "domain": "task_update", "endpoint": "/v1/classify", "input": "CI/CD pipeline 70% done", "expected_intent": "TASK_UPDATE"}
+{"id": 844, "domain": "general_completion", "endpoint": "/v1/completions", "input": "recommendation engine in software engineering means", "expected_intent": null}
+{"id": 845, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "LoRA stands for", "expected_intent": null}
+{"id": 846, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is supply and demand?", "expected_intent": null}
+{"id": 847, "domain": "task_update", "endpoint": "/v1/classify", "input": "payment module ke baad done karunga, 60% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 848, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Siddharth please complete the login page ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 849, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is data science?", "expected_intent": null}
+{"id": 850, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Rahul onboarding flow ka kaam complete karo ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 851, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is a REST API?", "expected_intent": null}
+{"id": 852, "domain": "general_message", "endpoint": "/v1/classify", "input": "update shared in the doc", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 853, "domain": "general_completion", "endpoint": "/v1/completions", "input": "A startup pivot is", "expected_intent": null}
+{"id": 854, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "A database index speeds up", "expected_intent": null}
+{"id": 855, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is the Pareto principle?", "expected_intent": null}
+{"id": 856, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "CI/CD pipeline stuck due to missing env variables", "expected_intent": "TASK_BLOCKED"}
+{"id": 857, "domain": "progress_note", "endpoint": "/v1/classify", "input": "deploy complete, admin panel is live, monitoring", "expected_intent": "PROGRESS_NOTE"}
+{"id": 858, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is knowledge distillation?", "expected_intent": null}
+{"id": 859, "domain": "productivity", "endpoint": "/v1/chat/completions", "input": "What is personal knowledge management?", "expected_intent": null}
+{"id": 860, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "waiting for DevOps to unblock auth service", "expected_intent": "TASK_BLOCKED"}
+{"id": 861, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Neha please complete the reports module ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 862, "domain": "career", "endpoint": "/v1/chat/completions", "input": "What skills does an LLM engineer need?", "expected_intent": null}
+{"id": 863, "domain": "progress_note", "endpoint": "/v1/classify", "input": "release v2.1 scheduled Thursday, CI/CD pipeline frozen", "expected_intent": "PROGRESS_NOTE"}
+{"id": 864, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "Model quantization reduces", "expected_intent": null}
+{"id": 865, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What does MVP mean in product?", "expected_intent": null}
+{"id": 866, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "DB migration failing, blocking search feature release", "expected_intent": "TASK_BLOCKED"}
+{"id": 867, "domain": "task_update", "endpoint": "/v1/classify", "input": "auth service 80% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 868, "domain": "business_completion", "endpoint": "/v1/completions", "input": "A competitive moat is", "expected_intent": null}
+{"id": 869, "domain": "general_message", "endpoint": "/v1/classify", "input": "please add comments, code is unclear", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 870, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Riya please complete the notification service ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 871, "domain": "task_done", "endpoint": "/v1/classify", "input": "done bhai, search feature merged to main", "expected_intent": "TASK_DONE"}
+{"id": 872, "domain": "career", "endpoint": "/v1/chat/completions", "input": "What is a typical ML team structure?", "expected_intent": null}
+{"id": 873, "domain": "general_message", "endpoint": "/v1/classify", "input": "happy friday!", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 874, "domain": "task_done", "endpoint": "/v1/classify", "input": "completed notification service, all tests passing", "expected_intent": "TASK_DONE"}
+{"id": 875, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "A message queue allows", "expected_intent": null}
+{"id": 876, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Sahil review the PR for mobile app", "expected_intent": "TASK_ASSIGN"}
+{"id": 877, "domain": "general_completion", "endpoint": "/v1/completions", "input": "dashboard in software engineering means", "expected_intent": null}
+{"id": 878, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is the context window?", "expected_intent": null}
+{"id": 879, "domain": "general_completion", "endpoint": "/v1/completions", "input": "auth service in software engineering means", "expected_intent": null}
+{"id": 880, "domain": "general_message", "endpoint": "/v1/classify", "input": "checking in \u2014 everyone aligned?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 881, "domain": "general_completion", "endpoint": "/v1/completions", "input": "payment module in software engineering means", "expected_intent": null}
+{"id": 882, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Himanshu please complete the payment module ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 883, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "waiting for DevOps to unblock recommendation engine", "expected_intent": "TASK_BLOCKED"}
+{"id": 884, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is the Pythagorean theorem?", "expected_intent": null}
+{"id": 885, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is the HuggingFace Hub?", "expected_intent": null}
+{"id": 886, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Arpit please complete the onboarding flow ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 887, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Himanshu search feature ka kaam complete karo ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 888, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is a loss function?", "expected_intent": null}
+{"id": 889, "domain": "task_done", "endpoint": "/v1/classify", "input": "profile settings shipped and live in production", "expected_intent": "TASK_DONE"}
+{"id": 890, "domain": "career", "endpoint": "/v1/chat/completions", "input": "What is the difference between MLE and data scientist?", "expected_intent": null}
+{"id": 891, "domain": "general_completion", "endpoint": "/v1/completions", "input": "dashboard in software engineering means", "expected_intent": null}
+{"id": 892, "domain": "general_completion", "endpoint": "/v1/completions", "input": "mobile app in software engineering means", "expected_intent": null}
+{"id": 893, "domain": "career", "endpoint": "/v1/chat/completions", "input": "What is the glassdoor salary for ML engineers?", "expected_intent": null}
+{"id": 894, "domain": "progress_note", "endpoint": "/v1/classify", "input": "load test: API integration stable at 800 rps", "expected_intent": "PROGRESS_NOTE"}
+{"id": 895, "domain": "progress_note", "endpoint": "/v1/classify", "input": "postmortem: auth service outage caused by config change", "expected_intent": "PROGRESS_NOTE"}
+{"id": 896, "domain": "general_completion", "endpoint": "/v1/completions", "input": "onboarding flow in software engineering means", "expected_intent": null}
+{"id": 897, "domain": "general_completion", "endpoint": "/v1/completions", "input": "admin panel in software engineering means", "expected_intent": null}
+{"id": 898, "domain": "general_message", "endpoint": "/v1/classify", "input": "ok I'll check", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 899, "domain": "general_completion", "endpoint": "/v1/completions", "input": "The greenhouse effect occurs when", "expected_intent": null}
+{"id": 900, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "can't start onboarding flow without product spec", "expected_intent": "TASK_BLOCKED"}
+{"id": 901, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Karan handle the client feedback on mobile app", "expected_intent": "TASK_ASSIGN"}
+{"id": 902, "domain": "general_message", "endpoint": "/v1/classify", "input": "who's joining the retro?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 903, "domain": "business_completion", "endpoint": "/v1/completions", "input": "Brand loyalty is built by", "expected_intent": null}
+{"id": 904, "domain": "general_completion", "endpoint": "/v1/completions", "input": "mobile app in software engineering means", "expected_intent": null}
+{"id": 905, "domain": "task_update", "endpoint": "/v1/classify", "input": "still working on checkout flow, need one more day", "expected_intent": "TASK_UPDATE"}
+{"id": 906, "domain": "general_completion", "endpoint": "/v1/completions", "input": "login page in software engineering means", "expected_intent": null}
+{"id": 907, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is dependency injection?", "expected_intent": null}
+{"id": 908, "domain": "task_update", "endpoint": "/v1/classify", "input": "payment module deployed to staging, waiting for QA", "expected_intent": "TASK_UPDATE"}
+{"id": 909, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "The HuggingFace library allows developers to", "expected_intent": null}
+{"id": 910, "domain": "task_done", "endpoint": "/v1/classify", "input": "tested reports module, no issues found", "expected_intent": "TASK_DONE"}
+{"id": 911, "domain": "general_completion", "endpoint": "/v1/completions", "input": "dashboard in software engineering means", "expected_intent": null}
+{"id": 912, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "can't start DB migration without product spec", "expected_intent": "TASK_BLOCKED"}
+{"id": 913, "domain": "general_message", "endpoint": "/v1/classify", "input": "any thoughts on this approach?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 914, "domain": "progress_note", "endpoint": "/v1/classify", "input": "deploy complete, checkout flow is live, monitoring", "expected_intent": "PROGRESS_NOTE"}
+{"id": 915, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is Docker?", "expected_intent": null}
+{"id": 916, "domain": "general_completion", "endpoint": "/v1/completions", "input": "The Pareto principle states", "expected_intent": null}
+{"id": 917, "domain": "general_completion", "endpoint": "/v1/completions", "input": "recommendation engine in software engineering means", "expected_intent": null}
+{"id": 918, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "third party API down, billing module integration stuck", "expected_intent": "TASK_BLOCKED"}
+{"id": 919, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "staging env misconfigured, all profile settings tests failing", "expected_intent": "TASK_BLOCKED"}
+{"id": 920, "domain": "general_message", "endpoint": "/v1/classify", "input": "I'll follow up async", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 921, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is a Python decorator?", "expected_intent": null}
+{"id": 922, "domain": "general_message", "endpoint": "/v1/classify", "input": "sent creds to your email", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 923, "domain": "task_done", "endpoint": "/v1/classify", "input": "mobile app shipped and live in production", "expected_intent": "TASK_DONE"}
+{"id": 924, "domain": "general_completion", "endpoint": "/v1/completions", "input": "payment module in software engineering means", "expected_intent": null}
+{"id": 925, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What does PEFT stand for?", "expected_intent": null}
+{"id": 926, "domain": "career", "endpoint": "/v1/chat/completions", "input": "What is the best way to learn PyTorch?", "expected_intent": null}
+{"id": 927, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is a hash map?", "expected_intent": null}
+{"id": 928, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "Who invented the telephone?", "expected_intent": null}
+{"id": 929, "domain": "general_completion", "endpoint": "/v1/completions", "input": "API integration in software engineering means", "expected_intent": null}
+{"id": 930, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "API integration is broken, can't proceed", "expected_intent": "TASK_BLOCKED"}
+{"id": 931, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "Microservices architecture splits", "expected_intent": null}
+{"id": 932, "domain": "task_update", "endpoint": "/v1/classify", "input": "API integration 75% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 933, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Rohan please complete the checkout flow by tomorrow", "expected_intent": "TASK_ASSIGN"}
+{"id": 934, "domain": "general_completion", "endpoint": "/v1/completions", "input": "admin panel in software engineering means", "expected_intent": null}
+{"id": 935, "domain": "task_update", "endpoint": "/v1/classify", "input": "mobile app 65% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 936, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is top_p sampling?", "expected_intent": null}
+{"id": 937, "domain": "business_completion", "endpoint": "/v1/completions", "input": "Market segmentation divides", "expected_intent": null}
+{"id": 938, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "DB migration failing, blocking recommendation engine release", "expected_intent": "TASK_BLOCKED"}
+{"id": 939, "domain": "general_message", "endpoint": "/v1/classify", "input": "link not working, reshare?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 940, "domain": "general_completion", "endpoint": "/v1/completions", "input": "profile settings in software engineering means", "expected_intent": null}
+{"id": 941, "domain": "business_completion", "endpoint": "/v1/completions", "input": "The rule of 40 for SaaS states", "expected_intent": null}
+{"id": 942, "domain": "business_completion", "endpoint": "/v1/completions", "input": "Net promoter score measures", "expected_intent": null}
+{"id": 943, "domain": "task_update", "endpoint": "/v1/classify", "input": "mobile app 80% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 944, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Jatin please complete the admin panel ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 945, "domain": "general_completion", "endpoint": "/v1/completions", "input": "profile settings in software engineering means", "expected_intent": null}
+{"id": 946, "domain": "task_done", "endpoint": "/v1/classify", "input": "completed login page, all tests passing", "expected_intent": "TASK_DONE"}
+{"id": 947, "domain": "general_completion", "endpoint": "/v1/completions", "input": "DB migration in software engineering means", "expected_intent": null}
+{"id": 948, "domain": "general_completion", "endpoint": "/v1/completions", "input": "The Pythagorean theorem states", "expected_intent": null}
+{"id": 949, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "How does temperature affect output?", "expected_intent": null}
+{"id": 950, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is product-market fit?", "expected_intent": null}
+{"id": 951, "domain": "general_completion", "endpoint": "/v1/completions", "input": "admin panel in software engineering means", "expected_intent": null}
+{"id": 952, "domain": "task_done", "endpoint": "/v1/classify", "input": "tested onboarding flow, no issues found", "expected_intent": "TASK_DONE"}
+{"id": 953, "domain": "progress_note", "endpoint": "/v1/classify", "input": "postmortem: CI/CD pipeline outage caused by config change", "expected_intent": "PROGRESS_NOTE"}
+{"id": 954, "domain": "task_done", "endpoint": "/v1/classify", "input": "API integration shipped and live in production", "expected_intent": "TASK_DONE"}
+{"id": 955, "domain": "general_completion", "endpoint": "/v1/completions", "input": "mobile app in software engineering means", "expected_intent": null}
+{"id": 956, "domain": "general_message", "endpoint": "/v1/classify", "input": "who leads the demo?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 957, "domain": "task_update", "endpoint": "/v1/classify", "input": "checkout flow 50% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 958, "domain": "general_message", "endpoint": "/v1/classify", "input": "where are the API docs?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 959, "domain": "general_message", "endpoint": "/v1/classify", "input": "team: Rohan on leave, Priya covering", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 960, "domain": "general_completion", "endpoint": "/v1/completions", "input": "API integration in software engineering means", "expected_intent": null}
+{"id": 961, "domain": "general_message", "endpoint": "/v1/classify", "input": "congrats on the promotion!", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 962, "domain": "task_update", "endpoint": "/v1/classify", "input": "billing module 75% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 963, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "Transfer learning allows", "expected_intent": null}
+{"id": 964, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "What is a tokenizer?", "expected_intent": null}
+{"id": 965, "domain": "task_update", "endpoint": "/v1/classify", "input": "mobile app 70% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 966, "domain": "coding_completion", "endpoint": "/v1/completions", "input": "A REST API endpoint accepts", "expected_intent": null}
+{"id": 967, "domain": "general_completion", "endpoint": "/v1/completions", "input": "login page in software engineering means", "expected_intent": null}
+{"id": 968, "domain": "ml_ai", "endpoint": "/v1/chat/completions", "input": "Why does batch size matter?", "expected_intent": null}
+{"id": 969, "domain": "task_done", "endpoint": "/v1/classify", "input": "done bhai, billing module merged to main", "expected_intent": "TASK_DONE"}
+{"id": 970, "domain": "general_completion", "endpoint": "/v1/completions", "input": "admin panel in software engineering means", "expected_intent": null}
+{"id": 971, "domain": "career", "endpoint": "/v1/chat/completions", "input": "How to build a strong GitHub portfolio?", "expected_intent": null}
+{"id": 972, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Tarun please complete the auth service ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 973, "domain": "general_completion", "endpoint": "/v1/completions", "input": "DB migration in software engineering means", "expected_intent": null}
+{"id": 974, "domain": "general_message", "endpoint": "/v1/classify", "input": "what's the release checklist?", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 975, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Jatin please complete the payment module ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 976, "domain": "general_completion", "endpoint": "/v1/completions", "input": "payment module in software engineering means", "expected_intent": null}
+{"id": 977, "domain": "general_completion", "endpoint": "/v1/completions", "input": "API integration in software engineering means", "expected_intent": null}
+{"id": 978, "domain": "task_update", "endpoint": "/v1/classify", "input": "mobile app 40% done", "expected_intent": "TASK_UPDATE"}
+{"id": 979, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Siddharth please complete the billing module ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 980, "domain": "general_message", "endpoint": "/v1/classify", "input": "ping me when free", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 981, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is a race condition?", "expected_intent": null}
+{"id": 982, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Karan take ownership of the DB migration this sprint", "expected_intent": "TASK_ASSIGN"}
+{"id": 983, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is Redis used for?", "expected_intent": null}
+{"id": 984, "domain": "task_blocked", "endpoint": "/v1/classify", "input": "CI is failing, can't deploy dashboard", "expected_intent": "TASK_BLOCKED"}
+{"id": 985, "domain": "task_done", "endpoint": "/v1/classify", "input": "done bhai, search feature merged to main", "expected_intent": "TASK_DONE"}
+{"id": 986, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "A vector database stores", "expected_intent": null}
+{"id": 987, "domain": "task_update", "endpoint": "/v1/classify", "input": "PR is up for notification service, waiting for review", "expected_intent": "TASK_UPDATE"}
+{"id": 988, "domain": "general_completion", "endpoint": "/v1/completions", "input": "onboarding flow in software engineering means", "expected_intent": null}
+{"id": 989, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is open source software?", "expected_intent": null}
+{"id": 990, "domain": "general_knowledge", "endpoint": "/v1/chat/completions", "input": "What is a bull vs bear market?", "expected_intent": null}
+{"id": 991, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Vijendra deploy the dashboard to staging today", "expected_intent": "TASK_ASSIGN"}
+{"id": 992, "domain": "task_assign", "endpoint": "/v1/classify", "input": "@Agrim please complete the admin panel ASAP", "expected_intent": "TASK_ASSIGN"}
+{"id": 993, "domain": "general_message", "endpoint": "/v1/classify", "input": "please review before EOD", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 994, "domain": "ml_completion", "endpoint": "/v1/completions", "input": "An embedding vector represents", "expected_intent": null}
+{"id": 995, "domain": "general_completion", "endpoint": "/v1/completions", "input": "API integration in software engineering means", "expected_intent": null}
+{"id": 996, "domain": "general_message", "endpoint": "/v1/classify", "input": "I agree with Rohan's approach", "expected_intent": "GENERAL_MESSAGE"}
+{"id": 997, "domain": "task_update", "endpoint": "/v1/classify", "input": "API integration 65% ho gaya", "expected_intent": "TASK_UPDATE"}
+{"id": 998, "domain": "general_completion", "endpoint": "/v1/completions", "input": "DB migration in software engineering means", "expected_intent": null}
+{"id": 999, "domain": "task_done", "endpoint": "/v1/classify", "input": "notification service is done, pushed to staging", "expected_intent": "TASK_DONE"}
+{"id": 1000, "domain": "coding", "endpoint": "/v1/chat/completions", "input": "What is idempotency in APIs?", "expected_intent": null}

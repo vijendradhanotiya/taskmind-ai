@@ -1,126 +1,52 @@
+import argparse
 import csv
 import json
+import random
 import sys
 import time
+from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
 
-BASE_URL = "http://localhost:8001"
-REPORT_DIR = Path("tests/reports")
+BASE_URL   = "http://localhost:8001"
+DATASET    = Path(__file__).parent / "datasets" / "prompts_1000.jsonl"
+REPORT_DIR = Path(__file__).parent / "reports"
 REPORT_DIR.mkdir(parents=True, exist_ok=True)
 REPORT_FILE = REPORT_DIR / f"report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
 
-CYAN  = "\033[96m"
-GREEN = "\033[92m"
-RED   = "\033[91m"
+CYAN   = "\033[96m"
+GREEN  = "\033[92m"
+RED    = "\033[91m"
 YELLOW = "\033[93m"
-BOLD  = "\033[1m"
-DIM   = "\033[2m"
-RESET = "\033[0m"
-
-CLASSIFY_PROMPTS = [
-    "@Agrim fix the growstreams deck ASAP NO Delay",
-    "done bhai, merged the PR",
-    "login page 60% ho gaya",
-    "getting 500 error on registration",
-    "Sure sir ready for it",
-    "@Arpit please complete the dashboard by Friday",
-    "yaar aaj server down tha, fixed kar diya",
-    "Payment gateway integration 80% complete",
-    "Great work team, keep it up!",
-    "@Neha the design review is pending from your end",
-    "backend API for user auth is done",
-    "database migration complete, tested on staging",
-    "@Rohan review the PR I just pushed",
-    "koi nahi bhai, ho jayega",
-    "CI/CD pipeline is broken again",
-    "sprint planning at 3pm today",
-    "@Agrim user reported bug in checkout flow, P0",
-    "75% of the onboarding flow is ready",
-    "good morning team!",
-    "@Priya can you update the wireframes by EOD",
-    "hotfix deployed to production",
-    "testing done, no issues found",
-    "deployment failed on prod - rollback initiated",
-    "@Shiv send me the API docs",
-    "okay noted",
-    "@Dev team please review architecture doc before tomorrow",
-    "load testing done, handles 500 rps comfortably",
-    "feature branch merged, ready for QA",
-    "@Arpit standup in 10 mins",
-    "LGTM, approved",
-]
-
-CHAT_PROMPTS = [
-    [{"role": "user", "content": "What is LoRA in simple terms?"}],
-    [{"role": "user", "content": "Explain what a fine-tuned model is like I'm 10"}],
-    [{"role": "system", "content": "You are a helpful ML assistant."}, {"role": "user", "content": "What is MPS on Apple Silicon?"}],
-    [{"role": "user", "content": "What is the difference between training and inference?"}],
-    [{"role": "user", "content": "What does PEFT stand for?"}],
-    [{"role": "user", "content": "Why is TinyLlama good for fine-tuning?"}],
-    [{"role": "system", "content": "Answer in one sentence."}, {"role": "user", "content": "What is a transformer model?"}],
-    [{"role": "user", "content": "What is overfitting in machine learning?"}],
-    [{"role": "user", "content": "How does attention mechanism work?"}],
-    [{"role": "user", "content": "What is the purpose of a tokenizer?"}],
-    [{"role": "user", "content": "Explain gradient descent simply"}],
-    [{"role": "user", "content": "What is a learning rate in training?"}],
-    [{"role": "system", "content": "Be concise."}, {"role": "user", "content": "What is SFT training?"}],
-    [{"role": "user", "content": "What is a loss function?"}],
-    [{"role": "user", "content": "Why do we use adapters instead of full fine-tuning?"}],
-    [{"role": "user", "content": "What does batch size mean in training?"}],
-    [{"role": "user", "content": "What is the HuggingFace hub used for?"}],
-    [{"role": "user", "content": "Explain what epochs are in model training"}],
-    [{"role": "user", "content": "What is a CUDA GPU?"}],
-    [{"role": "user", "content": "What is the difference between CPU and GPU training?"}],
-    [{"role": "user", "content": "What is FastAPI used for?"}],
-    [{"role": "user", "content": "How does REST API work?"}],
-    [{"role": "user", "content": "What is Docker and why use it?"}],
-    [{"role": "system", "content": "You are a senior engineer."}, {"role": "user", "content": "What is model quantization?"}],
-    [{"role": "user", "content": "What is the purpose of warmup steps in training?"}],
-    [{"role": "user", "content": "What does eval_loss mean?"}],
-    [{"role": "user", "content": "What is a checkpoint in ML training?"}],
-    [{"role": "user", "content": "How does temperature affect model output?"}],
-    [{"role": "user", "content": "What is top_p sampling?"}],
-    [{"role": "user", "content": "What is token accuracy in training metrics?"}],
-]
-
-COMPLETION_PROMPTS = [
-    "The capital of France is",
-    "Machine learning is a branch of",
-    "LoRA stands for",
-    "Fine-tuning a model means",
-    "The purpose of a neural network is",
-    "Python is a programming language that",
-    "Apple Silicon uses MPS which stands for",
-    "The most important metric during training is",
-    "A transformer model works by",
-    "Gradient descent is an algorithm that",
-    "The HuggingFace library allows developers to",
-    "An API endpoint accepts",
-    "FastAPI is a Python framework for",
-    "Docker containers help in",
-    "A training epoch is",
-    "The loss function measures",
-    "Overfitting occurs when",
-    "A batch size of 4 means",
-    "The tokenizer converts",
-    "Inference is the process of",
-    "A LoRA adapter adds",
-    "The learning rate controls",
-    "Warmup steps help the optimizer",
-    "The eval dataset is used to",
-    "A checkpoint saves",
-    "Token accuracy measures",
-    "The base model contains",
-    "Model quantization reduces",
-    "An attention mechanism helps the model",
-    "The adapter weights are stored in",
-]
+BOLD   = "\033[1m"
+DIM    = "\033[2m"
+RESET  = "\033[0m"
 
 results = []
-totals = {"passed": 0, "failed": 0}
+totals  = {"passed": 0, "failed": 0}
+domain_stats: dict = defaultdict(lambda: {"total": 0, "passed": 0,
+                                          "intent_correct": 0, "intent_total": 0,
+                                          "latencies": []})
+
+
+def load_dataset(sample: int | None) -> dict:
+    if not DATASET.exists():
+        print(f"{RED}Dataset not found: {DATASET}")
+        print(f"Run: python3 tests/datasets/generate_dataset.py{RESET}")
+        sys.exit(1)
+    rows = [json.loads(l) for l in DATASET.read_text().splitlines() if l.strip()]
+    by_ep: dict = defaultdict(list)
+    for r in rows:
+        by_ep[r["endpoint"]].append(r)
+    if sample:
+        sampled: dict = defaultdict(list)
+        for ep, items in by_ep.items():
+            random.shuffle(items)
+            sampled[ep] = items[:sample]
+        return sampled
+    return by_ep
 
 
 def log(color, symbol, label, message, latency_ms=None):
@@ -128,142 +54,197 @@ def log(color, symbol, label, message, latency_ms=None):
     print(f"  {color}{symbol}{RESET} {BOLD}{label}{RESET}  {message}{lat}")
 
 
-def call(method, path, body=None, label=""):
+def call(method, path, body=None):
     url = BASE_URL + path
-    t0 = time.perf_counter()
+    t0  = time.perf_counter()
     try:
-        if method == "GET":
-            r = requests.get(url, timeout=60)
-        else:
-            r = requests.post(url, json=body, timeout=60)
-        latency_ms = (time.perf_counter() - t0) * 1000
-        ok = r.status_code < 400
-        return r.status_code, r.json(), latency_ms, ok, None
+        r = requests.get(url, timeout=90) if method == "GET" \
+            else requests.post(url, json=body, timeout=90)
+        ms = (time.perf_counter() - t0) * 1000
+        return r.status_code, r.json(), ms, r.status_code < 400, None
     except Exception as e:
-        latency_ms = (time.perf_counter() - t0) * 1000
-        return 0, {}, latency_ms, False, str(e)
+        ms = (time.perf_counter() - t0) * 1000
+        return 0, {}, ms, False, str(e)
 
 
-def record(endpoint, input_text, status, latency_ms, raw_response, ok, extra=None):
+def record(endpoint, domain, input_text, status, latency_ms, raw, ok,
+           expected_intent=None, actual_intent=None, err=None):
+    intent_correct = ""
+    if expected_intent and actual_intent:
+        intent_correct = expected_intent.upper() == actual_intent.upper()
+
     row = {
-        "timestamp": datetime.now(timezone.utc).isoformat(),
-        "endpoint": endpoint,
-        "input": str(input_text)[:300],
-        "status_code": status,
-        "latency_ms": round(latency_ms, 1),
-        "ok": ok,
-        "response_summary": json.dumps(raw_response)[:400],
-        "intent": raw_response.get("result", {}).get("intent", "") if isinstance(raw_response, dict) else "",
-        "parse_success": raw_response.get("parse_success", "") if isinstance(raw_response, dict) else "",
-        "error": extra or "",
+        "timestamp":       datetime.now(timezone.utc).isoformat(),
+        "endpoint":        endpoint,
+        "domain":          domain,
+        "input":           str(input_text)[:300],
+        "status_code":     status,
+        "latency_ms":      round(latency_ms, 1),
+        "ok":              ok,
+        "expected_intent": expected_intent or "",
+        "actual_intent":   actual_intent  or "",
+        "intent_correct":  intent_correct,
+        "parse_success":   raw.get("parse_success", "") if isinstance(raw, dict) else "",
+        "response_summary": json.dumps(raw)[:350],
+        "error":           err or "",
     }
     results.append(row)
+    ds = domain_stats[domain]
+    ds["total"]    += 1
+    ds["latencies"].append(latency_ms)
     if ok:
         totals["passed"] += 1
+        ds["passed"] += 1
     else:
         totals["failed"] += 1
+    if expected_intent and actual_intent:
+        ds["intent_total"] += 1
+        if intent_correct:
+            ds["intent_correct"] += 1
     return row
 
 
 def section(title):
-    print(f"\n{BOLD}{CYAN}{'='*58}{RESET}")
+    print(f"\n{BOLD}{CYAN}{'='*62}{RESET}")
     print(f"{BOLD}{CYAN}  {title}{RESET}")
-    print(f"{BOLD}{CYAN}{'='*58}{RESET}")
+    print(f"{BOLD}{CYAN}{'='*62}{RESET}")
 
 
-def run_classify():
-    section("POST /v1/classify  (30 prompts)")
-    for i, msg in enumerate(CLASSIFY_PROMPTS):
-        status, data, latency, ok, err = call("POST", "/v1/classify", {"message": msg})
-        row = record("/v1/classify", msg, status, latency, data, ok, err)
-        intent = data.get("result", {}).get("intent", "?") if ok and data.get("result") else "NO_PARSE"
+def run_classify(items: list):
+    section(f"POST /v1/classify  ({len(items)} prompts from dataset)")
+    for i, item in enumerate(items):
+        msg = item["input"]
+        exp = item.get("expected_intent")
+        status, data, ms, ok, err = call("POST", "/v1/classify", {"message": msg})
+        actual = data.get("result", {}).get("intent") if ok and data.get("result") else None
+        correct = (exp and actual and exp.upper() == actual.upper())
+        row = record("/v1/classify", item["domain"], msg, status, ms, data, ok, exp, actual, err)
+        display_intent = actual or "NO_PARSE"
+        match_sym = f"{GREEN}✓{RESET}" if correct else (f"{RED}✗{RESET}" if exp else "")
         symbol = "✓" if ok else "✗"
-        color = GREEN if ok else RED
-        log(color, symbol, f"[{i+1:02d}]", f"{msg[:45]:<45} → {intent}", latency)
+        color  = GREEN if ok else RED
+        log(color, symbol, f"[{i+1:03d}]",
+            f"{msg[:40]:<40} → {display_intent:<18} {match_sym}", ms)
 
 
-def run_batch():
+def run_batch(classify_items: list):
+    batch_msgs = [i["input"] for i in classify_items[:30]]
     section("POST /v1/batch  (3 batches of 10)")
-    batches = [CLASSIFY_PROMPTS[:10], CLASSIFY_PROMPTS[10:20], CLASSIFY_PROMPTS[20:30]]
-    for i, batch in enumerate(batches):
-        status, data, latency, ok, err = call("POST", "/v1/batch", {"messages": batch})
+    for idx in range(3):
+        batch = batch_msgs[idx*10:(idx+1)*10]
+        status, data, ms, ok, err = call("POST", "/v1/batch", {"messages": batch})
         successful = data.get("successful", 0) if ok else 0
         total = data.get("total", len(batch))
-        record("/v1/batch", f"batch_{i+1}[{len(batch)} msgs]", status, latency, data, ok, err)
+        record("/v1/batch", "batch", f"batch_{idx+1}[{len(batch)} msgs]",
+               status, ms, data, ok, err=err)
         symbol = "✓" if ok else "✗"
-        color = GREEN if ok else RED
-        log(color, symbol, f"batch[{i+1}]", f"{len(batch)} messages → {successful}/{total} parsed  HTTP {status}", latency)
+        color  = GREEN if ok else RED
+        log(color, symbol, f"batch[{idx+1}]",
+            f"{len(batch)} messages → {successful}/{total} parsed  HTTP {status}", ms)
 
 
-def run_chat():
-    section("POST /v1/chat/completions  (30 messages)")
-    for i, messages in enumerate(CHAT_PROMPTS):
-        user_text = next((m["content"] for m in messages if m["role"] == "user"), "")
-        status, data, latency, ok, err = call("POST", "/v1/chat/completions", {
-            "messages": messages, "max_tokens": 80, "temperature": 0.7
-        })
+def run_chat(items: list):
+    section(f"POST /v1/chat/completions  ({len(items)} messages from dataset)")
+    for i, item in enumerate(items):
+        q = item["input"]
+        messages = [{"role": "user", "content": q}]
+        status, data, ms, ok, err = call("POST", "/v1/chat/completions",
+                                         {"messages": messages, "max_tokens": 80, "temperature": 0.7})
         answer = ""
         if ok and data.get("choices"):
-            answer = data["choices"][0]["message"]["content"][:60]
-        record("/v1/chat/completions", user_text, status, latency, data, ok, err)
+            answer = data["choices"][0]["message"]["content"][:55]
+        record("/v1/chat/completions", item["domain"], q, status, ms, data, ok, err=err)
         symbol = "✓" if ok else "✗"
-        color = GREEN if ok else RED
-        log(color, symbol, f"[{i+1:02d}]", f"{user_text[:40]:<40} → {answer[:55]}", latency)
+        color  = GREEN if ok else RED
+        log(color, symbol, f"[{i+1:03d}]", f"{q[:38]:<38} → {answer}", ms)
 
 
-def run_completions():
-    section("POST /v1/completions  (30 prompts)")
-    for i, prompt in enumerate(COMPLETION_PROMPTS):
-        status, data, latency, ok, err = call("POST", "/v1/completions", {
-            "prompt": prompt, "max_tokens": 40, "temperature": 0.7
-        })
+def run_completions(items: list):
+    section(f"POST /v1/completions  ({len(items)} prompts from dataset)")
+    for i, item in enumerate(items):
+        prompt = item["input"]
+        status, data, ms, ok, err = call("POST", "/v1/completions",
+                                         {"prompt": prompt, "max_tokens": 50, "temperature": 0.7})
         answer = ""
         if ok and data.get("choices"):
             answer = data["choices"][0]["text"][:55]
-        record("/v1/completions", prompt, status, latency, data, ok, err)
+        record("/v1/completions", item["domain"], prompt, status, ms, data, ok, err=err)
         symbol = "✓" if ok else "✗"
-        color = GREEN if ok else RED
-        log(color, symbol, f"[{i+1:02d}]", f"{prompt[:40]:<40} → {answer}", latency)
+        color  = GREEN if ok else RED
+        log(color, symbol, f"[{i+1:03d}]", f"{prompt[:38]:<38} → {answer}", ms)
 
 
 def run_ops():
     section("Ops Endpoints  (/health  /metrics  /v1/models)")
     for method, path in [("GET", "/health"), ("GET", "/metrics"), ("GET", "/v1/models")]:
-        status, data, latency, ok, err = call(method, path)
-        record(path, path, status, latency, data, ok, err)
+        status, data, ms, ok, err = call(method, path)
+        record(path, "ops", path, status, ms, data, ok, err=err)
         symbol = "✓" if ok else "✗"
-        color = GREEN if ok else RED
-        summary = json.dumps(data)[:80]
-        log(color, symbol, path, f"HTTP {status}  {summary}", latency)
+        color  = GREEN if ok else RED
+        log(color, symbol, path, f"HTTP {status}  {json.dumps(data)[:80]}", ms)
 
 
 def save_report():
-    fieldnames = ["timestamp", "endpoint", "input", "status_code", "latency_ms",
-                  "ok", "response_summary", "intent", "parse_success", "error"]
+    fieldnames = ["timestamp","endpoint","domain","input","status_code","latency_ms",
+                  "ok","expected_intent","actual_intent","intent_correct",
+                  "parse_success","response_summary","error"]
     with open(REPORT_FILE, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(results)
+        csv.DictWriter(f, fieldnames=fieldnames).writeheader()
+        csv.DictWriter(f, fieldnames=fieldnames).writerows(results)
     print(f"\n{BOLD}{GREEN}  Report saved → {REPORT_FILE}{RESET}")
 
 
 def print_summary():
-    total = totals["passed"] + totals["failed"]
-    avg_lat = sum(r["latency_ms"] for r in results) / len(results) if results else 0
-    p_lat = sorted(r["latency_ms"] for r in results)
-    p95 = p_lat[int(len(p_lat) * 0.95)] if p_lat else 0
-    print(f"\n{BOLD}{CYAN}{'='*58}")
-    print(f"  SUMMARY")
-    print(f"{'='*58}{RESET}")
-    print(f"  {GREEN}Passed : {totals['passed']}/{total}{RESET}")
+    total    = totals["passed"] + totals["failed"]
+    lats     = sorted(r["latency_ms"] for r in results)
+    avg_lat  = sum(lats) / len(lats) if lats else 0
+    p95      = lats[int(len(lats) * 0.95)] if lats else 0
+
+    classify_rows = [r for r in results if r["endpoint"] == "/v1/classify"
+                     and r["expected_intent"]]
+    intent_total   = len(classify_rows)
+    intent_correct = sum(1 for r in classify_rows if r["intent_correct"] is True)
+    intent_acc     = (intent_correct / intent_total * 100) if intent_total else 0
+
+    print(f"\n{BOLD}{CYAN}{'='*62}")
+    print(f"  OVERALL SUMMARY")
+    print(f"{'='*62}{RESET}")
+    print(f"  {GREEN}HTTP pass   : {totals['passed']}/{total}{RESET}")
     if totals["failed"]:
-        print(f"  {RED}Failed : {totals['failed']}/{total}{RESET}")
+        print(f"  {RED}HTTP fail   : {totals['failed']}/{total}{RESET}")
     print(f"  {YELLOW}Avg latency : {avg_lat:.0f}ms{RESET}")
     print(f"  {YELLOW}p95 latency : {p95:.0f}ms{RESET}")
-    print(f"  {DIM}Report      : {REPORT_FILE}{RESET}\n")
+    if intent_total:
+        acc_color = GREEN if intent_acc >= 80 else (YELLOW if intent_acc >= 60 else RED)
+        print(f"  {acc_color}Intent accuracy : {intent_correct}/{intent_total} "
+              f"= {intent_acc:.1f}%{RESET}")
+
+    print(f"\n{BOLD}  Per-Domain Accuracy (classify only){RESET}")
+    print(f"  {'Domain':<22} {'Calls':>6} {'HTTP%':>6} {'Intent%':>9} {'AvgMs':>7}")
+    print(f"  {'-'*54}")
+    for domain, ds in sorted(domain_stats.items()):
+        if ds["intent_total"] == 0:
+            continue
+        http_pct   = ds["passed"] / ds["intent_total"] * 100
+        intent_pct = ds["intent_correct"] / ds["intent_total"] * 100
+        avg_ms     = sum(ds["latencies"]) / len(ds["latencies"])
+        col = GREEN if intent_pct >= 80 else (YELLOW if intent_pct >= 60 else RED)
+        print(f"  {domain:<22} {ds['intent_total']:>6} {http_pct:>5.0f}% "
+              f"{col}{intent_pct:>8.1f}%{RESET} {avg_ms:>7.0f}ms")
+
+    print(f"\n  {DIM}Report → {REPORT_FILE}{RESET}\n")
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="TaskMind API Test Suite")
+    grp = parser.add_mutually_exclusive_group()
+    grp.add_argument("--sample", type=int, default=30, metavar="N",
+                     help="Prompts per endpoint to sample (default: 30)")
+    grp.add_argument("--all", action="store_true",
+                     help="Run all 1000 prompts (slow — ~30 min)")
+    args = parser.parse_args()
+    sample = None if args.all else args.sample
+
     print(f"\n{BOLD}{CYAN}")
     print("  ████████╗ █████╗ ███████╗██╗  ██╗███╗   ███╗██╗███╗   ██╗██████╗ ")
     print("     ██╔══╝██╔══██╗██╔════╝██║ ██╔╝████╗ ████║██║████╗  ██║██╔══██╗")
@@ -271,7 +252,8 @@ if __name__ == "__main__":
     print("     ██║   ██╔══██║╚════██║██╔═██╗ ██║╚██╔╝██║██║██║╚██╗██║██║  ██║")
     print("     ██║   ██║  ██║███████║██║  ██╗██║ ╚═╝ ██║██║██║ ╚████║██████╔╝")
     print("     ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═════╝ ")
-    print(f"  API Test Suite  —  {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}{RESET}\n")
+    mode_label = "ALL 1000 prompts" if args.all else f"sample={sample} per endpoint"
+    print(f"  API Test Suite  —  {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}  [{mode_label}]{RESET}\n")
 
     try:
         r = requests.get(f"{BASE_URL}/health", timeout=5)
@@ -280,13 +262,22 @@ if __name__ == "__main__":
         print(f"  {GREEN}Server is up at {BASE_URL}{RESET}")
     except Exception:
         print(f"  {RED}Cannot reach server at {BASE_URL}")
-        print(f"  Start it first: python3 -m uvicorn api.main:app --host 0.0.0.0 --port 8001{RESET}\n")
+        print(f"  Start: python3 -m uvicorn api.main:app --host 0.0.0.0 --port 8001{RESET}\n")
         sys.exit(1)
 
+    dataset = load_dataset(sample)
+    classify_items    = dataset.get("/v1/classify", [])
+    chat_items        = dataset.get("/v1/chat/completions", [])
+    completion_items  = dataset.get("/v1/completions", [])
+
+    print(f"  {DIM}Loaded {sum(len(v) for v in dataset.values())} prompts from dataset{RESET}")
+    print(f"  {DIM}classify={len(classify_items)}  chat={len(chat_items)}  "
+          f"completions={len(completion_items)}{RESET}\n")
+
     run_ops()
-    run_classify()
-    run_batch()
-    run_chat()
-    run_completions()
+    run_classify(classify_items)
+    run_batch(classify_items)
+    run_chat(chat_items)
+    run_completions(completion_items)
     save_report()
     print_summary()
