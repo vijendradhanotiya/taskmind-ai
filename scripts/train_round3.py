@@ -188,13 +188,18 @@ def main():
     tokenizer.pad_token = tokenizer.eos_token
 
     base = AutoModelForCausalLM.from_pretrained(
-        MODEL_ID, dtype=dtype, device_map={"": device}
+        MODEL_ID, torch_dtype=dtype,
+        device_map="auto" if device == "cuda" else None,
     )
+    if device != "cuda":
+        base = base.to(device)
     print("Base model loaded.")
 
     print(f"\nMerging R2 adapter ({R2_ADAPTER}) into base weights ...")
     model = PeftModel.from_pretrained(base, R2_ADAPTER)
     model = model.merge_and_unload()
+    if device != "cuda":
+        model = model.to(device)
     print("R2 merged. Training R3 adapter on top of merged model.")
 
     evaluate(model, tokenizer, "BASELINE (base + R2 merged, before R3)")
@@ -218,34 +223,31 @@ def main():
         output_dir=OUT_DIR,
         num_train_epochs=EPOCHS,
         per_device_train_batch_size=BATCH,
-        per_device_eval_batch_size=BATCH,
         gradient_accumulation_steps=GRAD_ACC,
         learning_rate=LR,
-        lr_scheduler_type="cosine",
-        warmup_ratio=0.06,
+        warmup_steps=20,
         eval_strategy="epoch",
         save_strategy="epoch",
         load_best_model_at_end=True,
-        metric_for_best_model="eval_loss",
         logging_steps=10,
-        fp16=False,
-        bf16=False,
+        fp16=(device == "cuda"),
         dataset_text_field="text",
-        max_seq_length=512,
+        max_length=512,
         report_to="none",
+        dataloader_pin_memory=False,
     )
 
     print("Starting Round 3 LoRA fine-tuning ...\n")
     trainer = SFTTrainer(
         model=model,
-        args=training_args,
         train_dataset=train_ds,
         eval_dataset=valid_ds,
         processing_class=tokenizer,
+        args=training_args,
     )
     trainer.train()
 
-    model.save_pretrained(OUT_DIR)
+    trainer.model.save_pretrained(OUT_DIR)
     tokenizer.save_pretrained(OUT_DIR)
     print(f"\nAdapter saved -> {OUT_DIR}/")
 
