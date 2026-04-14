@@ -3,11 +3,11 @@ import os
 
 class Settings:
     APP_NAME: str = "TaskMind API"
-    VERSION: str = "1.0.0"
-    MODEL_VERSION: str = "taskmind-1.1b-lora-v1"
+    VERSION: str = "2.0.0"
+    MODEL_VERSION: str = "taskmind-1.1b-lora-v2"
 
     BASE_MODEL: str = os.environ.get("BASE_MODEL", "TinyLlama/TinyLlama-1.1B-Chat-v1.0")
-    ADAPTER_DIR: str = os.environ.get("ADAPTER_DIR", "out/taskmind_lora_peft")
+    ADAPTER_DIR: str = os.environ.get("ADAPTER_DIR", "out/taskmind_lora_r2")
 
     API_KEY: str = os.environ.get("TASKMIND_API_KEY", "")
     REQUIRE_AUTH: bool = os.environ.get("REQUIRE_AUTH", "false").lower() == "true"
